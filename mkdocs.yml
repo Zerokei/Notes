@@ -1,16 +1,47 @@
-site_name: My Docs
+site_name: Zerokei's Notes
 
 # choose a theme
 theme:
   name: material
-
+  palette:
+  # 浅色模式
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: indigo #主题色
+    accent: red # 强调色
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+  # 深色模式
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate 
+    primary: blue # 主题色
+    accent: red # 强调色
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+  features: 
+    - navigation.tabs # 在上面一栏放置顶级目录
+    - navigation.indexes # 为每个目录添加一个index
+  font:
+    text: Roboto Mono # 设置字体
+    code: Roboto Mono # 设置字体
+  site_favicon: favicon.ico
 
 # support MathJax
-markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
+# markdown_extensions:
+#   - pymdownx.arithmatex:
+#       generic: true
 
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+# extra_javascript:
+#   - javascripts/mathjax.js
+#   - https://polyfill.io/v3/polyfill.min.js?features=es6
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:yezk@zju.edu.cn
+    - icon: fontawesome/brands/github
+      link: https://github.com/Zerokei
+copyright: Copyright &copy; 2022 - 2022 Zerokei
