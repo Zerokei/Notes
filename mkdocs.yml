@@ -26,22 +26,21 @@ theme:
     - navigation.tabs # 在上面一栏放置顶级目录
     - navigation.indexes # 为每个目录添加一个index
   font:
-    text: JetBrains Mono # 设置字体
+    text: JetBrains # 设置字体
     code: JetBrains Mono # 设置字体
   icon:
     logo: material/notebook-outline # 页面icon
   favicon: images/zerokei-logo.png # 标签icon
   language: 'zh' # 设置语言为中文
-  # favicon: asserts/images/favicon.png
-# support MathJax
-# markdown_extensions:
-#   - pymdownx.arithmatex:
-#       generic: true
 
-# extra_javascript:
-#   - javascripts/mathjax.js
-#   - https://polyfill.io/v3/polyfill.min.js?features=es6
-#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 
 extra:
   social:
@@ -49,13 +48,21 @@ extra:
       link: mailto:yezk@zju.edu.cn
     - icon: fontawesome/brands/github
       link: https://github.com/Zerokei
-
+    # - icon: fontawesome/solid/home
+    #   link: https://zerokei.top
 # 手动排版
 nav:
   - Home:
     - index.md
-  - tutorials: 
+  - Course:
+    - course/index.md
+    - Crypto:
+      - course/crypto/index.md
+      - course/crypto/AES.md
+      - course/crypto/RSA.md
+      - course/crypto/ECC.md
+  - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
-  - misc: 
+  - Misc: 
     - misc/index.md
