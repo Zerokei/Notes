@@ -29,7 +29,9 @@ theme:
     text: JetBrains Mono # 设置字体
     code: JetBrains Mono # 设置字体
   icon:
-    logo: material/notebook-outline
+    logo: material/notebook-outline # 页面icon
+  favicon: images/zerokei-logo.png # 标签icon
+  language: 'zh' # 设置语言为中文
   # favicon: asserts/images/favicon.png
 # support MathJax
 # markdown_extensions:
@@ -55,4 +57,5 @@ nav:
   - tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
-  - misc: /misc/
+  - misc: 
+    - misc/index.md
