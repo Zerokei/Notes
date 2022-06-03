@@ -1,4 +1,6 @@
-site_name: Zerokei's Notes
+site_description: 克瑞奇（Chritch）的笔记本 # 站点描述
+site_name: 克瑞奇（Chritch）的笔记本 # 站点名字
+copyright: Copyright &copy; 2022 - 2022 Zerokei
 
 # choose a theme
 theme:
@@ -24,10 +26,11 @@ theme:
     - navigation.tabs # 在上面一栏放置顶级目录
     - navigation.indexes # 为每个目录添加一个index
   font:
-    text: Roboto Mono # 设置字体
-    code: Roboto Mono # 设置字体
-  # site_favicon: favicon.ico
-
+    text: JetBrains Mono # 设置字体
+    code: JetBrains Mono # 设置字体
+  icon:
+    logo: material/notebook-outline
+  # favicon: asserts/images/favicon.png
 # support MathJax
 # markdown_extensions:
 #   - pymdownx.arithmatex:
@@ -44,4 +47,12 @@ extra:
       link: mailto:yezk@zju.edu.cn
     - icon: fontawesome/brands/github
       link: https://github.com/Zerokei
-copyright: Copyright &copy; 2022 - 2022 Zerokei
+
+# 手动排版
+nav:
+  - Home:
+    - index.md
+  - tutorials: 
+    - tutorials/index.md
+    - tutorials/mkdocs.md
+  - misc: /misc/

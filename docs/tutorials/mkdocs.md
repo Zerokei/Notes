@@ -1,5 +1,5 @@
 
-# mkdocs 安装记录
+# mkdocs安装记录
 
 ## 本地环境配置
 
@@ -52,6 +52,6 @@ jobs:
 
 ## 参考资料
 
-[使用MkDocs 快速搭建文档系统](https://www.bluesdawn.top/489/)
-[MkDocs Material](https://jamstackthemes.dev/demo/theme/mkdocs-material/)
-[Github多域名部署](https://www.cnblogs.com/dev2007/p/13947333.html)
+- [使用MkDocs 快速搭建文档系统](https://www.bluesdawn.top/489/)
+- [MkDocs Material](https://jamstackthemes.dev/demo/theme/mkdocs-material/)
+- [Github多域名部署](https://www.cnblogs.com/dev2007/p/13947333.html)
