@@ -1,6 +1,7 @@
 site_description: 克瑞奇（Chritch）的笔记本 # 站点描述
 site_name: 克瑞奇（Chritch）的笔记本 # 站点名字
 copyright: Copyright &copy; 2022 - 2022 Zerokei
+repo_url: https://github.com/Zerokei/Notes/
 
 # choose a theme
 theme:
@@ -36,6 +37,7 @@ theme:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -58,6 +60,12 @@ nav:
     - course/index.md
     - Crypto:
       - course/crypto/index.md
+      - course/crypto/Math.md
+      - course/crypto/old.md
+      - course/crypto/md5.md
+      - course/crypto/SHA1.md
+      - course/crypto/rc4.md
+      - course/crypto/DES.md
       - course/crypto/AES.md
       - course/crypto/RSA.md
       - course/crypto/ECC.md
