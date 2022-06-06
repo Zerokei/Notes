@@ -69,6 +69,7 @@ nav:
       - course/crypto/AES.md
       - course/crypto/RSA.md
       - course/crypto/ECC.md
+      - course/crypto/final.md
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
