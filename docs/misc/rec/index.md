@@ -11,6 +11,7 @@
 - [鬼谷大学|自学指南/国外资源翻译](https://www.yuque.com/guigumentor)
 - [浙江大学课程资源共享计划](https://qsctech.github.io/zju-icicles/)
 - [The Missing Semester of Your CS Education|CS前置知识](https://missing-semester-cn.github.io/)
+- [哔哩哔哩蒋炎岩|操作系统/计算机系统基础](https://space.bilibili.com/202224425)
 
 ## 推荐工具
 
