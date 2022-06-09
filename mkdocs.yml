@@ -10,7 +10,7 @@ theme:
   # 浅色模式
   - media: "(prefers-color-scheme: light)"
     scheme: default
-    primary: indigo #主题色
+    primary: orange #主题色
     accent: red # 强调色
     toggle:
       icon: material/toggle-switch-off-outline
