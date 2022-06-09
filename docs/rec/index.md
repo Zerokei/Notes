@@ -3,6 +3,7 @@
 
 ## 推荐阅读
 
+- [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
 - [The illustrated guide to a Ph.D.](https://matt.might.net/articles/phd-school-in-pictures/)
 - [精通一件事需要10000小时，但学会一件事，只需要20小时](https://www.bilibili.com/video/BV144411b7Uk)
 
