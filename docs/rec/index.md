@@ -12,12 +12,13 @@
 - [浙江大学课程资源共享计划](https://qsctech.github.io/zju-icicles/)
 - [The Missing Semester of Your CS Education|CS前置知识](https://missing-semester-cn.github.io/)
 - [哔哩哔哩蒋炎岩|操作系统/计算机系统基础](https://space.bilibili.com/202224425)
+- [Learn X in Y minutes|快速入门一门编程语言](https://learnxinyminutes.com/)
 
 ## 推荐工具
 
 - [Excalidraw|在线无限画布](https://excalidraw.com/)
-- [Notion](https://notion.so/)
-- [Obsidian](https://obsidian.md/)
+- [Notion|All in one在线笔记/个人博客/协作软件](https://notion.so/)
+- [Obsidian|离线markdown编辑器/知识库](https://obsidian.md/)
 
 ## 推荐订阅
 

@@ -73,6 +73,7 @@ nav:
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
+  - Recommendation:
+    - rec/index.md
   - Misc: 
     - misc/index.md
-    - misc/rec/index.md
