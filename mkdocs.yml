@@ -75,3 +75,4 @@ nav:
     - tutorials/mkdocs.md
   - Misc: 
     - misc/index.md
+    - misc/rec/index.md
