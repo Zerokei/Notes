@@ -4,6 +4,7 @@
 ## 推荐阅读
 
 - [The illustrated guide to a Ph.D.](https://matt.might.net/articles/phd-school-in-pictures/)
+- [精通一件事需要10000小时，但学会一件事，只需要20小时](https://www.bilibili.com/video/BV144411b7Uk)
 
 ## 学习资源
 
@@ -14,13 +15,20 @@
 - [哔哩哔哩蒋炎岩|操作系统/计算机系统基础](https://space.bilibili.com/202224425)
 - [Learn X in Y minutes|快速入门一门编程语言](https://learnxinyminutes.com/)
 
-## 推荐工具
+## 推荐软件
 
-- [Excalidraw|在线无限画布](https://excalidraw.com/)
 - [Notion|All in one在线笔记/个人博客/协作软件](https://notion.so/)
 - [Obsidian|离线markdown编辑器/知识库](https://obsidian.md/)
+- [Listary|本地文件查找/软件加载](https://www.listary.com/)
+
 
 ## 推荐订阅
 
 - [阮一峰的网络日志-科技爱好者周刊](https://ruanyifeng.com/blog/)
 - [咸鱼肆](https://www.yuque.com/xianyuxuan/saltfish_shop)
+
+## 小工具推荐
+
+- [Excalidraw|在线无限画布](https://excalidraw.com/)
+- [carbon|代码块图片生成](https://carbon.now.sh/)
+- [Zlibrary|世界最大的免费电子书库](https://book4you.org/)
