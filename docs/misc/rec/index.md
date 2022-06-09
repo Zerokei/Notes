@@ -15,6 +15,8 @@
 ## 推荐工具
 
 - [Excalidraw|在线无限画布](https://excalidraw.com/)
+- [Notion](https://notion.so/)
+- [Obsidian](https://obsidian.md/)
 
 ## 推荐订阅
 
