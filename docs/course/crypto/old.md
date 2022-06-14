@@ -5,6 +5,7 @@ date-updated: 2022-06-04 00:09
 
 !!! info
 	- 2022/6/14 修改Enigma加密流程图
+	- 2022/6/14 添加double stepping示意图
 
 # 古典密码
 
@@ -82,3 +83,4 @@ RFWKA
    - 当齿轮I从位置Q转到R时，齿轮Ⅱ被带动跳转
    - 若此时齿轮Ⅱ是从D跳转到E，则下一次齿轮Ⅱ从E跳转到F，并带动齿轮Ⅲ跳转
    - 可以理解为 I=Q,Ⅱ=D,Ⅲ=X -> I=R,Ⅱ=E,Ⅲ=X -> I=S,Ⅱ=F,Ⅲ=X+1
+   - ![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220614191250.png)
