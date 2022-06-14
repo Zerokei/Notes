@@ -24,7 +24,7 @@ Data Encryption Standard
 - key循环过程
     1. `key_rol_steps`，两个28bit分别循环左移
     2. `key_56bit_to_48bit_table`: 从56bit中选出48个bit
-    3. 继续执行1
+    3. 继续执行步骤a
 
 ## DES加密
 
