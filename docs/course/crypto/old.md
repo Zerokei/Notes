@@ -77,10 +77,10 @@ QEVJZ
 RFWKA  
 
 1. 常规跳转
-   - 每按一下，齿轮I跳转一下
-   - 当齿轮I从位置Q转到R时，齿轮Ⅱ被带动跳转一下
+   	- 每按一下，齿轮I跳转一下
+   	- 当齿轮I从位置Q转到R时，齿轮Ⅱ被带动跳转一下
 2. double stepping
-   - 当齿轮I从位置Q转到R时，齿轮Ⅱ被带动跳转
-   - 若此时齿轮Ⅱ是从D跳转到E，则下一次齿轮Ⅱ从E跳转到F，并带动齿轮Ⅲ跳转
-   - 可以理解为 I=Q,Ⅱ=D,Ⅲ=X -> I=R,Ⅱ=E,Ⅲ=X -> I=S,Ⅱ=F,Ⅲ=X+1
-   - ![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220614191411.png)
+   	- 当齿轮I从位置Q转到R时，齿轮Ⅱ被带动跳转
+   	- 若此时齿轮Ⅱ是从D跳转到E，则下一次齿轮Ⅱ从E跳转到F，并带动齿轮Ⅲ跳转
+   	- 可以理解为 I=Q,Ⅱ=D,Ⅲ=X -> I=R,Ⅱ=E,Ⅲ=X -> I=S,Ⅱ=F,Ⅲ=X+1
+   	- ![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220614191411.png)
