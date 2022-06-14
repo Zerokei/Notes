@@ -9,8 +9,6 @@ date-updated: 2022-06-04 00:09
 	- 2022/6/14 修改Enigma加密流程图
 	- 2022/6/14 添加double stepping示意图
 
-明文(plaintext) ---> 密文(ciphertext)
-
 ## 单表密码
 
 - 使用明文密文对照表
