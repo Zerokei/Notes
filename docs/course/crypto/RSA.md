@@ -44,7 +44,7 @@
 
 ## RSA正确性证明
 
-已知 $c=m^e{\rm\ mod}\ N$, $cd\equiv 1 \mod (p-1)(q-1)$, p、q互素，$N=p*q$
+已知 $c=m^e{\rm\ mod}\ N$, $ed\equiv 1 \mod (p-1)(q-1)$, p、q互素，$N=p*q$
 证明 $m = c^d{\rm\ mod}\ N$
 
 ### Step1 公式化简
