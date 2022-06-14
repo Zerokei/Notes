@@ -2,7 +2,8 @@
 date-created: 2022-06-03 23:51
 date-updated: 2022-06-04 00:09
 ---
-
+!!! info
+	- 2022/6/14 修改Enigma加密流程图
 # 古典密码
 
 明文(plaintext) ---> 密文(ciphertext)
@@ -54,13 +55,13 @@ Kenngrunppen: 和日期对应 方便情报归类
 
 ```
 plaintext -> wiring board 
-          -> +delta1 -> rotor1 
-		  -> +delta2 -> rotor2 
-		  -> +delta3 -> rotor3 
+          -> +delta1 -> rotor1 -> -delta1
+		  -> +delta2 -> rotor2 -> -delta2
+		  -> +delta3 -> rotor3 -> -delta3
 		  -> reflactor 
-		  -> rotor3 -> -delta3
-		  -> rotor2 -> -delta2
-		  -> rotor3 -> -delta1 
+		  -> +delta3 -> rotor3 -> -delta3
+		  -> +delta2 -> rotor2 -> -delta2
+		  -> +delta1 -> rotor3 -> -delta1 
 		  -> wiring board 
 		  						-> cripertext
 ```
