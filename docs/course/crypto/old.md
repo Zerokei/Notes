@@ -2,8 +2,10 @@
 date-created: 2022-06-03 23:51
 date-updated: 2022-06-04 00:09
 ---
+
 !!! info
 	- 2022/6/14 修改Enigma加密流程图
+
 # 古典密码
 
 明文(plaintext) ---> 密文(ciphertext)
