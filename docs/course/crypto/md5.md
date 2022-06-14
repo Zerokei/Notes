@@ -24,7 +24,7 @@ $$
 
 $$
 \begin{aligned}
-\rm md5(letter) == \rm rsa(m, public\ key)\\
+\rm md5(letter) == \rm rsa(m', public\ key)\\
 \end{aligned}
 $$
 
