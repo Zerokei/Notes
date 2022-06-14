@@ -249,6 +249,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../rec/" class="md-tabs__link">
+        Recommendation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../misc/" class="md-tabs__link">
         Misc
       </a>
@@ -412,6 +428,20 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -432,6 +462,90 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/Math/" class="md-nav__link">
+        数学基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/old/" class="md-nav__link">
+        古典密码
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/md5/" class="md-nav__link">
+        MD5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/SHA1/" class="md-nav__link">
+        SHA-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/rc4/" class="md-nav__link">
+        分组密码工作模式与流密码
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/DES/" class="md-nav__link">
+        DES
+      </a>
+    </li>
+  
+
             
           
             
@@ -470,6 +584,20 @@
     <li class="md-nav__item">
       <a href="../../course/crypto/ECC/" class="md-nav__link">
         ECC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/final/" class="md-nav__link">
+        Crypto 考试重点
       </a>
     </li>
   
@@ -683,12 +811,56 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
+          <a href="../../rec/">Recommendation</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Recommendation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recommendation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
           <a href="../../misc/">Misc</a>
           
         </div>
       
       <nav class="md-nav" aria-label="Misc" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Misc
         </label>
@@ -817,22 +989,22 @@
 
 <h1 id="mkdocs">mkdocs安装记录</h1>
 <h2 id="_1">本地环境配置</h2>
-<pre><code class="language-bash">pip install mkdocs-material
+<div class="highlight"><pre><span></span><code>pip install mkdocs-material
 mkdocs new .
-</code></pre>
+</code></pre></div>
 <h2 id="mkdocsyml">修改mkdocs.yml</h2>
 <p>设置material主题</p>
-<pre><code class="language-yml">#添加下列代码
+<div class="highlight"><pre><span></span><code>#添加下列代码
 theme:
   name: material
-</code></pre>
+</code></pre></div>
 <h2 id="_2">远程部署</h2>
 <p>采用Github远程部署</p>
 <h3 id="1-github">1. 创建github仓库</h3>
 <h3 id="2">2. 上传本地的代码</h3>
 <h3 id="3-github-action">3. 设置github action</h3>
-<p>使用下方代码创建一个新的github action</p>
-<pre><code class="language-yml">name: ci 
+<p>使用下方代码创建一个新的github action
+<div class="highlight"><pre><span></span><code>name: ci 
 on:
     push:
     branches:
@@ -848,7 +1020,7 @@ jobs:
             python-version: 3.x
         - run: pip install mkdocs-material 
         - run: mkdocs gh-deploy --force
-</code></pre>
+</code></pre></div></p>
 <h3 id="4">4. 设置渲染分支</h3>
 <p>在Setting页设置渲染的分支
 <img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220603102723.png" /></p>
@@ -891,13 +1063,13 @@ jobs:
       
       
         
-        <a href="../../misc/" class="md-footer__link md-footer__link--next" aria-label="下一页: Introduction" rel="next">
+        <a href="../../rec/" class="md-footer__link md-footer__link--next" aria-label="下一页: 一些推荐" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Introduction
+              一些推荐
             </div>
           </div>
           <div class="md-footer__button md-icon">

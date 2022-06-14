@@ -249,6 +249,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../../rec/" class="md-tabs__link">
+        Recommendation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../../misc/" class="md-tabs__link">
         Misc
       </a>
@@ -416,6 +432,20 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -436,6 +466,90 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Math/" class="md-nav__link">
+        数学基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../old/" class="md-nav__link">
+        古典密码
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../md5/" class="md-nav__link">
+        MD5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SHA1/" class="md-nav__link">
+        SHA-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rc4/" class="md-nav__link">
+        分组密码工作模式与流密码
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DES/" class="md-nav__link">
+        DES
+      </a>
+    </li>
+  
+
             
           
             
@@ -535,8 +649,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step2-mp-1q-1equiv-1-mod-n" class="md-nav__link">
-    Step2 证明 \(m^{(p-1)(q-1)}\equiv 1 \mod N\)
+  <a href="#step2" class="md-nav__link">
+    Step2 分类讨论证明
   </a>
   
 </li>
@@ -563,6 +677,20 @@
     <li class="md-nav__item">
       <a href="../ECC/" class="md-nav__link">
         ECC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../final/" class="md-nav__link">
+        Crypto 考试重点
       </a>
     </li>
   
@@ -671,12 +799,56 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../rec/">Recommendation</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Recommendation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recommendation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
           <a href="../../../misc/">Misc</a>
           
         </div>
       
       <nav class="md-nav" aria-label="Misc" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Misc
         </label>
@@ -760,8 +932,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step2-mp-1q-1equiv-1-mod-n" class="md-nav__link">
-    Step2 证明 \(m^{(p-1)(q-1)}\equiv 1 \mod N\)
+  <a href="#step2" class="md-nav__link">
+    Step2 分类讨论证明
   </a>
   
 </li>
@@ -789,6 +961,10 @@
 
 
 
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>修正了对RSA正确性的证明</p>
 <h1 id="rsa">RSA</h1>
 <ul>
 <li>e: 加密公钥</li>
@@ -844,28 +1020,25 @@
 =&amp; m*(m^{(p-1)(q-1)})^k {\rm\ mod}\ N\\
 \end{aligned}
 \]</div>
-<h3 id="step2-mp-1q-1equiv-1-mod-n">Step2 证明 <span class="arithmatex">\(m^{(p-1)(q-1)}\equiv 1 \mod N\)</span></h3>
+<h3 id="step2">Step2 分类讨论证明</h3>
+<p>（1）若<span class="arithmatex">\(\gcd(m,N)=1\)</span>，则<span class="arithmatex">\(m^{\phi(N)}\equiv 1\mod N\)</span></p>
 <div class="arithmatex">\[
 \begin{aligned}
 &amp;\because gcb(p,q)=1,\phi(p)=p-1,\phi(q)=q-1\\
 &amp;\therefore \phi(pq)=\phi(p)\phi(q)=(p-1)(q-1)\\
-&amp;\therefore m^{(p-1)(q-1)}=m^{\phi(pq)}=m^{\phi(N)}
+&amp;\therefore m^{(p-1)(q-1)}=m^{\phi(pq)}=m^{\phi(N)} \equiv 1\mod N\\
+&amp;\therefore m*(m^{(p-1)(q-1)})^k \equiv m\mod\ N
 \end{aligned}
 \]</div>
-<p>联想到了欧拉定理：若<span class="arithmatex">\(\gcd(X,N)=1\)</span>，则<span class="arithmatex">\(X^{\phi(N)}\equiv 1\mod N\)</span>
-则需要证明 m,N互质。</p>
+<p>（2）若<span class="arithmatex">\(\gcd(m,N)\ne 1\)</span></p>
 <div class="arithmatex">\[
 \begin{aligned}
-&amp;\because m&lt;N, if\ \gcd(m,N)\ne1\\
-&amp;\therefore m={k_1}*q(k_1&lt;p)\ {\rm or}\ {k_2}*p(k_2&lt;q)\\
-&amp;\therefore gcd(m,N)=1
+&amp;\because m&lt;N, \gcd(m,N)\ne1\\
+&amp;假设 gcd(m,M)=p\ (m = cp), 则 m \equiv 1 \mod q\\
+&amp; \therefore m^{k(p-1)(q-1)} \equiv (m^{q-1})^{k(p-1)} \equiv 1\mod q\\
+&amp;令 m^{k(p-1)(q-1)}=sq+1\\
+&amp; \therefore m*m^{s(p-1)(q-1)} = m * (s*q + 1) = c*s*p*q + m =c*s*N+m\equiv m \mod N\\
 \end{aligned}
-\]</div>
-<p>所以
-<span class="arithmatex">\(m^{\phi(N)}\equiv 1\mod N\)</span>
-因此</p>
-<div class="arithmatex">\[
-e^d{\rm\ mod}\ N=m*(m^{\phi(N)})^k{\rm\ mod}\ N = m * 1^k{\rm\ mod}\ N = m{\rm\ mod}\ N = m
 \]</div>
 <p>QED</p>
 

@@ -1,3 +1,5 @@
+!!! info
+    - 2022/6/14 修正了对RSA正确性的证明 
 # RSA
 
 - e: 加密公钥
@@ -57,33 +59,29 @@ $$
 \end{aligned}
 $$
 
-### Step2 证明 $m^{(p-1)(q-1)}\equiv 1 \mod N$
+### Step2 分类讨论证明
+
+（1）若$\gcd(m,N)=1$，则$m^{\phi(N)}\equiv 1\mod N$
 
 $$
 \begin{aligned}
 &\because gcb(p,q)=1,\phi(p)=p-1,\phi(q)=q-1\\
 &\therefore \phi(pq)=\phi(p)\phi(q)=(p-1)(q-1)\\
-&\therefore m^{(p-1)(q-1)}=m^{\phi(pq)}=m^{\phi(N)}
+&\therefore m^{(p-1)(q-1)}=m^{\phi(pq)}=m^{\phi(N)} \equiv 1\mod N\\
+&\therefore m*(m^{(p-1)(q-1)})^k \equiv m\mod\ N
 \end{aligned}
 $$
 
-联想到了欧拉定理：若$\gcd(X,N)=1$，则$X^{\phi(N)}\equiv 1\mod N$
-则需要证明 m,N互质。
+（2）若$\gcd(m,N)\ne 1$
 
 $$
 \begin{aligned}
-&\because m<N, if\ \gcd(m,N)\ne1\\
-&\therefore m={k_1}*q(k_1<p)\ {\rm or}\ {k_2}*p(k_2<q)\\
-&\therefore gcd(m,N)=1
+&\because m<N, \gcd(m,N)\ne1\\
+&假设 gcd(m,M)=p\ (m = cp), 则 m \equiv 1 \mod q\\
+& \therefore m^{k(p-1)(q-1)} \equiv (m^{q-1})^{k(p-1)} \equiv 1\mod q\\
+&令 m^{k(p-1)(q-1)}=sq+1\\
+& \therefore m*m^{s(p-1)(q-1)} = m * (s*q + 1) = c*s*p*q + m =c*s*N+m\equiv m \mod N\\
 \end{aligned}
-$$
-
-所以
-$m^{\phi(N)}\equiv 1\mod N$
-因此
-
-$$
-e^d{\rm\ mod}\ N=m*(m^{\phi(N)})^k{\rm\ mod}\ N = m * 1^k{\rm\ mod}\ N = m{\rm\ mod}\ N = m
 $$
 
 QED
