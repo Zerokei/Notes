@@ -5,6 +5,9 @@ date-updated: 2022-06-04 12:29
 
 # DES
 
+!!! info
+    - 2022/6/14 DES加密过程补充（R(48)和key异或）
+
 Data Encryption Standard  
 密钥长度为64bit  
 明文加密可采用ECB、CBC、CFB  
@@ -33,6 +36,7 @@ Data Encryption Standard
     - 使用perm进行查表优化
 - f(R(32),key(48)) (32bit->32bit)
     - 经过位选择函数E R(32)->R(48) (32bit->48bit)
+    - R(48)和key(48)异或
     - S盒 `char S[8][64]` `8*(a1a2a3a4a5a6) = 8*S[a1a6][a2a3a4a5]` (48bit->32bit)
         - ![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220604121538.png)
     - 置换函数P(32bit->32bit)
