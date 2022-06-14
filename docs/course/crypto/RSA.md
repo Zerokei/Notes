@@ -80,7 +80,7 @@ $$
 &假设 gcd(m,M)=p\ (m = cp), 则 m \equiv 1 \mod q\\
 & \therefore m^{k(p-1)(q-1)} \equiv (m^{q-1})^{k(p-1)} \equiv 1\mod q\\
 &令 m^{k(p-1)(q-1)}=sq+1\\
-& \therefore m*m^{s(p-1)(q-1)} = m * (s*q + 1) = c*s*p*q + m =c*s*N+m\equiv m \mod N\\
+& \therefore m*m^{k(p-1)(q-1)} = m * (s*q + 1) = c*s*p*q + m =c*s*N+m\equiv m \mod N\\
 \end{aligned}
 $$
 
