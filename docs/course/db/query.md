@@ -3,7 +3,6 @@ date-created: 2022-06-13 20:21
 date-updated: 2022-06-16 11:20
 ---
 
-#db
 
 # Query Processing & Optimization
 
