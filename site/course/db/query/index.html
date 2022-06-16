@@ -15,7 +15,7 @@
     
     
       
-        <title>分组密码工作模式与流密码 - 克瑞奇（Chritch）的笔记本</title>
+        <title>Query Processing & Optimization - 克瑞奇（Chritch）的笔记本</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#query-processing-optimization" class="md-skip">
           跳转至
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              分组密码工作模式与流密码
+              Query Processing & Optimization
             
           </span>
         </div>
@@ -412,14 +412,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       
       
@@ -453,7 +451,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Crypto</a>
+          <a href="../../crypto/">Crypto</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -476,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Math/" class="md-nav__link">
+      <a href="../../crypto/Math/" class="md-nav__link">
         数学基础
       </a>
     </li>
@@ -490,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../old/" class="md-nav__link">
+      <a href="../../crypto/old/" class="md-nav__link">
         古典密码
       </a>
     </li>
@@ -504,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../md5/" class="md-nav__link">
+      <a href="../../crypto/md5/" class="md-nav__link">
         MD5
       </a>
     </li>
@@ -518,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SHA1/" class="md-nav__link">
+      <a href="../../crypto/SHA1/" class="md-nav__link">
         SHA-1
       </a>
     </li>
@@ -530,73 +528,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          分组密码工作模式与流密码
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../crypto/rc4/" class="md-nav__link">
         分组密码工作模式与流密码
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-ecb" class="md-nav__link">
-    1. 电子密码簿模式 ECB
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-cbc" class="md-nav__link">
-    2. 密文块链接模式 CBC
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-cfb" class="md-nav__link">
-    3. 密文反馈模式 CFB
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-rc4" class="md-nav__link">
-    4. 流密码算法 RC4
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -608,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DES/" class="md-nav__link">
+      <a href="../../crypto/DES/" class="md-nav__link">
         DES
       </a>
     </li>
@@ -622,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AES/" class="md-nav__link">
+      <a href="../../crypto/AES/" class="md-nav__link">
         AES
       </a>
     </li>
@@ -636,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RSA/" class="md-nav__link">
+      <a href="../../crypto/RSA/" class="md-nav__link">
         RSA
       </a>
     </li>
@@ -650,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ECC/" class="md-nav__link">
+      <a href="../../crypto/ECC/" class="md-nav__link">
         ECC
       </a>
     </li>
@@ -664,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../final/" class="md-nav__link">
+      <a href="../../crypto/final/" class="md-nav__link">
         Crypto 考试重点
       </a>
     </li>
@@ -683,12 +619,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       
       
@@ -710,7 +648,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../db/">Database</a>
+          <a href="../">Database</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -754,7 +692,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../db/sql/">Relational Model & SQL</a>
+          <a href="../sql/">Relational Model & SQL</a>
           
             <label for="__nav_2_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -777,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sql/algebra/" class="md-nav__link">
+      <a href="../sql/algebra/" class="md-nav__link">
         Relational Algebra
       </a>
     </li>
@@ -791,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sql/sql/" class="md-nav__link">
+      <a href="../sql/sql/" class="md-nav__link">
         SQL
       </a>
     </li>
@@ -812,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         Database Storage
       </a>
     </li>
@@ -847,7 +785,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../db/index/">Database Index</a>
+          <a href="../index/">Database Index</a>
           
             <label for="__nav_2_3_4">
               <span class="md-nav__icon md-icon"></span>
@@ -870,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/index/Bplus/" class="md-nav__link">
+      <a href="../index/Bplus/" class="md-nav__link">
         B+ Tree
       </a>
     </li>
@@ -884,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/index/lsm/" class="md-nav__link">
+      <a href="../index/lsm/" class="md-nav__link">
         LSM Tree
       </a>
     </li>
@@ -903,11 +841,120 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../db/query/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Query Processing & Optimization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Query Processing & Optimization
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-translation" class="md-nav__link">
+    Parsing &amp; Translation
+  </a>
+  
+    <nav class="md-nav" aria-label="Parsing &amp; Translation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measures-of-query-cost" class="md-nav__link">
+    Measures of Query Cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-merge-sort" class="md-nav__link">
+    External Merge Sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    Join
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    Optimization
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalence-rule" class="md-nav__link">
+    Equivalence Rule(等价关系表达式)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-estimation" class="md-nav__link">
+    Cost Estimation(结果集大小估计)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1105,30 +1152,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-ecb" class="md-nav__link">
-    1. 电子密码簿模式 ECB
+  <a href="#parsing-translation" class="md-nav__link">
+    Parsing &amp; Translation
+  </a>
+  
+    <nav class="md-nav" aria-label="Parsing &amp; Translation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measures-of-query-cost" class="md-nav__link">
+    Measures of Query Cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-merge-sort" class="md-nav__link">
+    External Merge Sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    Join
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-cbc" class="md-nav__link">
-    2. 密文块链接模式 CBC
+  <a href="#optimization" class="md-nav__link">
+    Optimization
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalence-rule" class="md-nav__link">
+    Equivalence Rule(等价关系表达式)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-cfb" class="md-nav__link">
-    3. 密文反馈模式 CFB
+        
+          <li class="md-nav__item">
+  <a href="#cost-estimation" class="md-nav__link">
+    Cost Estimation(结果集大小估计)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-rc4" class="md-nav__link">
-    4. 流密码算法 RC4
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1144,37 +1238,282 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/Zerokei/Notes/edit/master/docs/course/crypto/rc4.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/Zerokei/Notes/edit/master/docs/course/db/query.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="_1">分组密码工作模式与流密码</h1>
-<h2 id="1-ecb">1. 电子密码簿模式 ECB</h2>
-<p>Electronic codebook mode，将明文拆分成若干段，分别加密。</p>
+<h1 id="query-processing-optimization">Query Processing &amp; Optimization</h1>
+<p>查询处理共分为三个过程：执行(Parsing &amp; Translation)、优化(Optimization)、估计(Evaluation)</p>
+<h2 id="parsing-translation">Parsing &amp; Translation</h2>
+<h3 id="measures-of-query-cost">Measures of Query Cost</h3>
 <ul>
-<li>ECB的加密过程：<span class="arithmatex">\(C_j = E_k(P_j)\)</span></li>
-<li>ECB的解密过程：<span class="arithmatex">\(P_j = D_k(C_j)\)</span></li>
-<li>ECB的缺点：同样内容的明文段，加密结果总是相同，容易被攻破</li>
-<li>ECB的优点：加密和解密过程均可并行</li>
+<li><span class="arithmatex">\(t_T\)</span>: time to transfer one block</li>
+<li><span class="arithmatex">\(t_S\)</span>: time for one seek</li>
+<li>Cost for b block transfers plus S seeks: <span class="arithmatex">\(b*t_T + S*t_S\)</span></li>
 </ul>
-<h2 id="2-cbc">2. 密文块链接模式 CBC</h2>
-<p>Cipher Block Chaining Mode，加密过程如下，每次加密都依赖上一次的密文。加密流程如下图所示。<br />
-<img alt="" src="https://s2.loli.net/2022/03/21/9vTicxaWhLOdreA.png" /></p>
+<h3 id="selection">Selection</h3>
 <ul>
-<li>CBC缺点：加密过程只能串行</li>
-<li>CBC优点：相较ECB更为安全，且解密过程可以并行</li>
+<li>Linear Search(equality on key): 线性搜索<ul>
+<li>worst cost: <span class="arithmatex">\(b_r * t_T + t_S\)</span> （关系表存放在<span class="arithmatex">\(b_r\)</span>个block中）</li>
+<li>average cost: <span class="arithmatex">\((b_r/2)*t_T + t_S\)</span></li>
 </ul>
-<h2 id="3-cfb">3. 密文反馈模式 CFB</h2>
-<p>Cipher feedback mode
-可以设置位移步长（当步长为一组的长度时，算法约等于CBC），组与组之间理论上存在相互印证关系，使得其在密文传输中若产生错误，也只会影响部分数据。</p>
-<p>一般情况下，ECB的加密块大小为8byte，而CFB采用1byte。加密流程如下图所示。其中P为明文(P1,P2...Pn)，C为密文，Ek为以k为密钥的加密算法，X1为初始
-<img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220603234404.png" /></p>
+</li>
+<li>Primary B+-Tree index(equality on key): B+树主索引搜索<ul>
+<li>Cost: <span class="arithmatex">\((h_i+1)*(t_T+t_S)\)</span>，<span class="arithmatex">\(h_i\)</span>是B+树的高度，每次需要从Disk中Seek该块并读入，而后面的1是指最后找到目标块时，需要进行seek+transfer(使用Index必不可少的)</li>
+</ul>
+</li>
+<li>Primary B+-Tree index(equality on nonkey): B+树主索引，单值(非唯一)<ul>
+<li>Cost: <span class="arithmatex">\(h_i*(t_T+t_S)+t_S+b*t_T\)</span>，其中b是包含查找值的数据块个数。</li>
+</ul>
+</li>
+<li>Secondary B+-Tree index(equality on key): B+树辅助索引<ul>
+<li>Cost: <span class="arithmatex">\((h_i+1)*(t_T+t_S)\)</span>，和B+树主索引搜索原理一样</li>
+</ul>
+</li>
+<li>Secondary B+-index on nonkey: B+树辅助索引，单值v(非唯一)<ul>
+<li>Cost: <span class="arithmatex">\((h_i + m+ n) * (t_T + t_S)\)</span></li>
+<li>m指B+树中，对应查找值v索引的块的数量</li>
+<li>n指包含查找值v的数据块的数量</li>
+<li><img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220613212054.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="external-merge-sort">External Merge Sort</h3>
 <ul>
-<li>CFB优点：相较ECB更为安全，可以从传输的密文错误中恢复。</li>
+<li>M: memory size，内存共可存放的页的个数</li>
+<li>大致流程可以通过下图表示：<img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220615202516.png" /><ul>
+<li>第一轮传入M块数据，进行原地排序。（使用快排、堆排序等原地排序算法）</li>
+<li>第二轮及后面每轮，合并M-1个有序序列。</li>
+<li>注意，需要在memory块中预留一个区域存放排序好的有序序列，所以每轮合并后，有序序列的段数就少了M-1倍（预留出一个输出块的原因是：可以以块为单位写回，节省时间开销）</li>
 </ul>
-<h2 id="4-rc4">4. 流密码算法 RC4</h2>
+</li>
+<li>block transfers<ul>
+<li>Total number of merge passes required: <span class="arithmatex">\(\lceil \log_{M-1}(b_r/M)\rceil\)</span> (第一次排序被视为初始化，不计入其中，可带入检验<span class="arithmatex">\(b_r=M\)</span>和<span class="arithmatex">\(b_r=M-1\)</span>的情况)</li>
+<li>因为在一轮归并排序中，一个块需要经历写入内存、然后写回磁盘，所以每轮的开销是 <span class="arithmatex">\(2b_r\)</span></li>
+<li>最后一轮排序，不计算写回disk的开销。</li>
+<li>所以总次数是<span class="arithmatex">\(b_r(2\lceil \log_{M-1}(b_r/M)\rceil + 1)\)</span></li>
+</ul>
+</li>
+<li>seek times<ul>
+<li>第一次排序：<span class="arithmatex">\(\lceil b_r/M\rceil\)</span> 次seek</li>
+<li>第二次排序及后面的排序：假设每次读入/写出的块数为<span class="arithmatex">\(\lceil b_b \rceil\)</span> 则需要<span class="arithmatex">\(\lceil b_r/b_b\rceil\)</span>次读出和写入，此处共经历<span class="arithmatex">\(\lceil \log_{M-1}{(b_r/M)} \rceil\)</span>轮排序，最后一轮不用写入，故一共为<span class="arithmatex">\(\lceil b_r/b_b\rceil(2\lceil \log_{M-1}{(b_r/M)} \rceil -1)\)</span>次seek</li>
+<li>总计为<span class="arithmatex">\(2\lceil b_r/M \rceil + \lceil b_r/b_b\rceil(2\lceil \log_{M-1}{(b_r/M)} \rceil -1)\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="join">Join</h3>
+<p>(1) Nested-Loop Join
+<span class="arithmatex">\(r\bowtie_\theta s\)</span>，伪代码如下：</p>
+<div class="highlight"><pre><span></span><code>for each tuple tr in r do begin
+    for each tuple ts in s do begin
+        test pair (tr, ts) to see if they satisfy the join condition
+        if they do, add tr·ts to the result
+    end
+end
+</code></pre></div>
+<ul>
+<li>最坏情况（只能载入两个block，r/s各一个）<ul>
+<li>block transfers: <span class="arithmatex">\(b_r+n_r*b_s\)</span><ul>
+<li>r共要载入<span class="arithmatex">\(b_r\)</span>次，而s共要载入<span class="arithmatex">\(n_r*b_s\)</span>次</li>
+</ul>
+</li>
+<li>seek times: <span class="arithmatex">\(b_r+n_r\)</span><ul>
+<li>r共要seek <span class="arithmatex">\(b_r\)</span>次，而s共要seek <span class="arithmatex">\(n_r\)</span>次</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>最好情况（全部元组都能直接载入内存）<ul>
+<li>block transfers <span class="arithmatex">\(b_r + b_s\)</span></li>
+<li>seek times: <span class="arithmatex">\(2\)</span></li>
+</ul>
+</li>
+</ul>
+<p>(2) Block Nested-Loop Join</p>
+<div class="highlight"><pre><span></span><code>for each block Br in r do begin
+    for each block Bs in s do begin
+        for each tuple tr in Br do begin
+            for each tuple ts in Bs do begin
+                test pair (tr, ts) to see if they satisfy the join condition
+                if they do, add tr·ts to the result
+            end
+        end
+    end
+end
+</code></pre></div>
+<ul>
+<li>最坏情况（只能载入两个block，r/s各一个）<ul>
+<li>block transfers: <span class="arithmatex">\(b_r+b_r*b_s\)</span><ul>
+<li>r共要载入<span class="arithmatex">\(b_r\)</span>次，而s共要载入<span class="arithmatex">\(b_r*b_s\)</span>次</li>
+</ul>
+</li>
+<li>seek times: <span class="arithmatex">\(2b_r\)</span><ul>
+<li>r共要seek <span class="arithmatex">\(b_r\)</span>次，而s共要seek <span class="arithmatex">\(b_r\)</span>次</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>最好情况（全部元组都能直接载入内存）<ul>
+<li>block transfers <span class="arithmatex">\(b_r + b_s\)</span></li>
+<li>seek times: <span class="arithmatex">\(2\)</span></li>
+</ul>
+</li>
+</ul>
+<p>(3) Indexed Nested-Loop Join</p>
+<ul>
+<li>原理：外层遍历tuple，内层使用索引匹配（如B+树索引等）</li>
+<li>最坏情况（只能载入两个block，r/s各一个）</li>
+<li>因为索引本身的复杂度较复杂，故只给出较粗略的估算<span class="arithmatex">\(b_r*(t_T+t_S)+n_r*c\)</span><ul>
+<li>其中<span class="arithmatex">\(c\)</span>指单次查询的平均开销</li>
+</ul>
+</li>
+</ul>
+<p>(4) Merge-Join</p>
+<ul>
+<li>算法流程<ol>
+<li>根据index的attributes进行排序</li>
+<li>连接两个排序过的表（从头到尾扫描）</li>
+</ol>
+</li>
+<li>理想情况下（每个块只需要读进内存一次）<ul>
+<li>block transfers: <span class="arithmatex">\(b_r + b_s\)</span> +(排序)</li>
+<li>seek times: <span class="arithmatex">\(\lceil b_r/b_b\rceil + \lceil b_s/b_b\rceil\)</span> +(排序)</li>
+</ul>
+</li>
+</ul>
+<p>(5) Hash-Join</p>
+<p>大致流程如下</p>
+<div class="highlight"><pre><span></span><code>将r划分成nh个块
+将s划分成nh个块
+
+for 0 to nh-1
+    对r对应块中的元素建立索引Ri
+    for 遍历s对应块中的元素
+        检索索引Ri
+        for 所有匹配的tuple in r
+            join
+        end
+    end
+end
+</code></pre></div>
+<p>假设r,s分别被划分了<span class="arithmatex">\(n_r,n_s\)</span>个块，但当<span class="arithmatex">\(n_r,n_s&gt;M\)</span>超过内存的容纳空间时，则需要进行递归划分。</p>
+<ul>
+<li>若没有递归划分<ul>
+<li>block transfer: <span class="arithmatex">\(3(b_r+b_s)+4n_h\)</span><ul>
+<li>划分过程需要遍历表，包含读出和写回 <span class="arithmatex">\(2*(b_r+b_s)\)</span></li>
+<li>匹配过程需要遍历表，只包含读出 <span class="arithmatex">\(b_r+b_s\)</span></li>
+<li>但是若Hash表非满，则至多制造出<span class="arithmatex">\(n_h\)</span>个非满块，涉及划分的写回和匹配的读出，作用于两个表，故共<span class="arithmatex">\(4n_h\)</span> (实际中<span class="arithmatex">\(n_h\)</span>一般很小，可以忽略不计)</li>
+</ul>
+</li>
+<li>seek times: <span class="arithmatex">\(2(\lceil b_r/b_b\rceil +\lceil b_s/b_b\rceil)+2n_h\)</span><ul>
+<li>划分过程需要遍历表，假设每次放入内存块中<span class="arithmatex">\(b_b\)</span>个，则读出写回共需<span class="arithmatex">\(2(\lceil b_r/b_b\rceil +\lceil b_s/b_b\rceil)\)</span>次</li>
+<li>匹配过程中直接取Hash块，共<span class="arithmatex">\(2n_h\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>若有递归划分<ul>
+<li>递归划分的原则是，每次将划分的大小降为原来的<span class="arithmatex">\(M-1\)</span>，直至每个划分的最多占<span class="arithmatex">\(M\)</span>块为止（使得内存能够容纳下，以便于建立索引）</li>
+<li>block transfer: <span class="arithmatex">\(2(b_r+b_s)\lceil log_{M-1}(b_s)-1\rceil+b_r+b_n\)</span><ul>
+<li>共进行<span class="arithmatex">\(\lceil log_{M-1}(b_s)-1\rceil\)</span>轮</li>
+<li>其余参照没有递归划分的情况</li>
+</ul>
+</li>
+<li>seek times: <span class="arithmatex">\(2(\lceil b_r/b_b\rceil +\lceil b_s/b_b\rceil)\lceil log_{M-1}(b_s)-1\rceil+2n_h\)</span><ul>
+<li>共进行<span class="arithmatex">\(\lceil log_{M-1}(b_s)-1\rceil\)</span>轮</li>
+<li>其余参照没有递归划分的情况</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="evaluation">Evaluation</h2>
+<p>对一些单操作的复杂度有了解之后，可以使用物化(Materialization)和流水(pipelining)的方法将他们串起来</p>
+<ul>
+<li>实体化：依次进行表达式的计算，构建前缀树递归进行</li>
+<li>流水线：同时评估多个操作</li>
+</ul>
+<h2 id="optimization">Optimization</h2>
+<h3 id="equivalence-rule">Equivalence Rule(等价关系表达式)</h3>
+<ol>
+<li>Conjunctive selection operations can be deconstructed into a sequence of indicidual selections <span class="arithmatex">\(\sigma_{\theta_1\land\theta_2}(E)=\sigma_{\theta_1}(\sigma_{\theta_2}(E))\)</span></li>
+<li>Selection operations are commutative <span class="arithmatex">\(\sigma_{\theta_1}(\sigma_{\theta_2}(E)) = \sigma_{\theta_2}(\sigma_{\theta_1}(E))\)</span></li>
+<li>Only the last in a sequence of projection operations is needed, the others can be ommitted.<span class="arithmatex">\(\Pi_{L_1}(\Pi_{L_2}(...(\Pi_{L_n}(E))...))=\Pi_{L_1}(E)\)</span></li>
+<li>Selections can be combined with Cartesian products and theta joins.
+        (1) <span class="arithmatex">\(\sigma_{\theta}(E_1\times E_2) = E_1 \bowtie_\theta E_2\)</span>
+        (2) <span class="arithmatex">\(\sigma_{\theta_1}(E_1\bowtie_{\theta_2} E_2)=E_1\bowtie_{\theta_1\land\theta_2}E_2\)</span></li>
+<li>Theta-join operations (and natural joins) are commutative.<span class="arithmatex">\(E_1\bowtie_\theta E_2 = E_2\bowtie_\theta E_1\)</span></li>
+<li>Natural join operatins are associative <span class="arithmatex">\((E_1\bowtie E_2)\bowtie E_3 = E_1\bowtie(E_2\bowtie E_3)\)</span>, Theta joins are associative in the following manner <span class="arithmatex">\((E_1\bowtie_{\theta_1} E_2)\bowtie_{\theta_2\land\theta_3} E_3 = E_1\bowtie_{\theta_1\land \theta_3}(E_2\bowtie_{\theta_2} E_3)\)</span>, where <span class="arithmatex">\(theta_2\)</span> involves attributes from only <span class="arithmatex">\(E_2\)</span> and <span class="arithmatex">\(E_3\)</span>.</li>
+<li>The selection operation distributes over the theta join operation under the following two conditions:
+        (1) When all the attributes in <span class="arithmatex">\(\theta_0\)</span> involve only the attributes of one of the expressions (<span class="arithmatex">\(E_1\)</span>) being joined <span class="arithmatex">\(\sigma_{\theta_0}(E_1\bowtie_{\theta}E_2)=(\sigma_{\theta_0}(E_1))\bowtie_\theta E_2\)</span>
+        (2) When <span class="arithmatex">\(\theta_1\)</span> involves only the attributes of <span class="arithmatex">\(E_1\)</span> and <span class="arithmatex">\(\theta_2\)</span> involves only the attributes of <span class="arithmatex">\(E_2\)</span>. <span class="arithmatex">\(\sigma_{\theta_1\land \theta_2}(E_1\bowtie_{\theta}E_2)=(\sigma_{\theta_1}(E_1))\bowtie_{\theta}(\sigma_{\theta_2}(E_2))\)</span></li>
+<li>The projetion operation distributes over the theta join operation as follows:
+        (1) if <span class="arithmatex">\(\theta\)</span> involves only attributes from <span class="arithmatex">\(L_1 \cup L2\)</span>: <span class="arithmatex">\(\Pi_{L1\cup L_2}(E_1\bowtie_{\theta}E_2)=(\Pi_{L_1}(E_1))\bowtie_{\theta}(\Pi_{L_2}(E_2))\)</span>
+        (2) Consider a join <span class="arithmatex">\(E_1\bowtie_\theta E_2\)</span>.
+        (3) Let <span class="arithmatex">\(L_1\)</span> and <span class="arithmatex">\(L_2\)</span> be sets of attributes from <span class="arithmatex">\(E_1\)</span> and <span class="arithmatex">\(E_2\)</span> respectively
+        (4) Let <span class="arithmatex">\(L_3\)</span> be attributes of <span class="arithmatex">\(E_1\)</span> that are involved in join condition <span class="arithmatex">\(\theta\)</span>, but are not in <span class="arithmatex">\(L_1 \cup L_2\)</span>
+        (5) Let <span class="arithmatex">\(L_4\)</span> be attributes of <span class="arithmatex">\(E_2\)</span> that are involved in join condition <span class="arithmatex">\(\theta\)</span>, but are not in <span class="arithmatex">\(L_1\cup L_2\)</span>
+        <span class="arithmatex">\(\Pi_{L_1\cup L_2}(E_1\bowtie_\theta E_2)=\Pi_{L_1\cup L_2}((\Pi_{L_1\cup L_3}(E_1))\bowtie_\theta(\Pi_{L2\cup L_4}(E_2)))\)</span></li>
+<li>The set operations union and intersection are commutative <span class="arithmatex">\(E_1 \cup E_2 = E_2 \cup E_1\)</span>, <span class="arithmatex">\(E_1\cap E_2 = E_2 \cap E_1\)</span></li>
+<li>Set union and intersection are assocative <span class="arithmatex">\((E_1\cup E_2)\cup E_3 = E_1 \cup (E_2\cup E_3)\)</span>, <span class="arithmatex">\((E_1\cap E_2)\cap E_3=E_1\cap(E_2\cap E_3)\)</span></li>
+<li>The selection operation distributes over <span class="arithmatex">\(\cap\)</span>, <span class="arithmatex">\(\cup\)</span> and <span class="arithmatex">\(-\)</span> <span class="arithmatex">\(\sigma_\theta(E_1-E_2)=\sigma_\theta(E_1)-\sigma_\theta(E_2)\)</span></li>
+<li>The projection operation distributes over union <span class="arithmatex">\(\Pi_{L}(E_1\cup E_2)=(\Pi_L(E_1))\cup (\Pi_{L}(E_2))\)</span></li>
+</ol>
+<h3 id="cost-estimation">Cost Estimation(结果集大小估计)</h3>
+<ul>
+<li>基本概念<ul>
+<li><span class="arithmatex">\(n_r\)</span>: number of tuples in a relation <span class="arithmatex">\(r\)</span></li>
+<li><span class="arithmatex">\(b_r\)</span>: number of blocks containing tuples of <span class="arithmatex">\(r\)</span></li>
+<li><span class="arithmatex">\(l_r\)</span>: size of a tuple of <span class="arithmatex">\(r\)</span></li>
+<li><span class="arithmatex">\(f_r\)</span>: blocking factor of <span class="arithmatex">\(r\)</span></li>
+<li><span class="arithmatex">\(V(A,r)\)</span>: number of distinct values that appear in <span class="arithmatex">\(r\)</span> for attribute <span class="arithmatex">\(A\)</span>; same as the size of <span class="arithmatex">\(\Pi_A(r)\)</span></li>
+<li><span class="arithmatex">\(b_r=\lceil \frac{n_r}{f_r} \rceil\)</span></li>
+</ul>
+</li>
+<li>算法估计<ul>
+<li>选择估计<span class="arithmatex">\(\sigma_{A=v}(r)\)</span><ul>
+<li>一般假设为均匀分布</li>
+<li><span class="arithmatex">\(n_r/V(A,r)\)</span></li>
+</ul>
+</li>
+<li>复杂选择估计<ul>
+<li>合取<span class="arithmatex">\(\sigma_{\theta_1\land \theta_2\land\dots\land\theta_n(r)}\)</span>: <span class="arithmatex">\(n_r\cdot\frac{s_1\cdot s_2\dots s_n}{n_r^n}\)</span></li>
+<li>析取<span class="arithmatex">\(\sigma_{\theta_1\lor \theta_2\lor\dots\lor\theta_n(r)}\)</span>: <span class="arithmatex">\(n_r\cdot(1-(1-\frac{s_1}{n_r})(1-\frac{s_2}{n_r})\dots(1-\frac{s_n}{n_r}))\)</span></li>
+</ul>
+</li>
+<li>
+<p>连接估计<span class="arithmatex">\(r\bowtie s\)</span></p>
+<ul>
+<li>
+<p>若两个关系无共同属性: <span class="arithmatex">\(n_r · n_s\)</span></p>
+</li>
+<li>
+<p>若共同属性是r的key: <span class="arithmatex">\({\rm size} \le n_s\)</span> <img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616100956.png" /></p>
+</li>
+<li>
+<p>若共同属性是s到r的foregin key: <span class="arithmatex">\(n_r\)</span><img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616101006.png" /></p>
+</li>
+<li>
+<p>若共同属性不是key: <span class="arithmatex">\(\min(\frac{n_s\cdot n_r}{V(A,s)}, \frac{n_s\cdot n_r}{V(A,r)})\)</span><img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616101205.png" /></p>
+<ul>
+<li>投影: <span class="arithmatex">\(\Pi(s)\)</span>: <span class="arithmatex">\(V(A,r)\)</span></li>
+<li>聚合: <span class="arithmatex">\(\mathcal{G}(s)\)</span>: <span class="arithmatex">\(V(A,r)\)</span></li>
+<li>集合：转换为合取和析取</li>
+</ul>
+</li>
+<li>Heuristic Optimization 探索式的优化<ul>
+<li>尽早进行selection</li>
+<li>尽早进行projection</li>
+<li>选择最严格的selection和operations操作</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
               
             </article>
@@ -1190,7 +1529,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../SHA1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: SHA-1" rel="prev">
+        <a href="../index/lsm/" class="md-footer__link md-footer__link--prev" aria-label="上一页: LSM Tree" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1199,20 +1538,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              SHA-1
+              LSM Tree
             </div>
           </div>
         </a>
       
       
         
-        <a href="../DES/" class="md-footer__link md-footer__link--next" aria-label="下一页: DES" rel="next">
+        <a href="../../../tutorials/" class="md-footer__link md-footer__link--next" aria-label="下一页: Introduction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              DES
+              Introduction
             </div>
           </div>
           <div class="md-footer__button md-icon">
