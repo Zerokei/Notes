@@ -79,6 +79,7 @@ nav:
         - course/db/sql/index.md
         - course/db/sql/algebra.md
         - course/db/sql/sql.md
+      - course/db/ER.md
       - course/db/storage.md
       - Database Index:
         - course/db/index/index.md
