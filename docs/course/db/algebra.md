@@ -3,7 +3,7 @@ date-created: 2022-06-16 11:21
 date-updated: 2022-06-16 14:12
 ---
 
-# Relational algebra
+# Relational Algebra
 
 ## 基本操作
 
