@@ -75,7 +75,10 @@ nav:
       - course/crypto/final.md
     - Database:
       - course/db/index.md
-      - course/db/algebra.md
+      - Relational Model & SQL:
+        - course/db/sql/index.md
+        - course/db/sql/algebra.md
+        - course/db/sql/sql.md
       - course/db/storage.md
       - Database Index:
         - course/db/index/index.md
