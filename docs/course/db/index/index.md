@@ -3,8 +3,6 @@ date-created: 2022-06-13 19:42
 date-updated: 2022-06-13 20:02
 ---
 
-#db
-
 # Database Index
 
 ## 概述
