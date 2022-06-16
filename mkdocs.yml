@@ -80,6 +80,7 @@ nav:
         - course/db/index/index.md
         - course/db/index/Bplus.md
         - course/db/index/lsm.md
+      - course/db/query.md
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
