@@ -384,6 +384,8 @@
         
           
         
+          
+        
       
       
         
@@ -684,6 +686,138 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Database" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/storage/" class="md-nav__link">
+        Database Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../db/">Database Index</a>
+          
+            <label for="__nav_2_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Database Index" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Database Index
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/Bplus/" class="md-nav__link">
+        B+ Tree
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/lsm/" class="md-nav__link">
+        LSM Tree
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -933,7 +1067,7 @@
 </ul>
 <h2 id="ecc_2">ECC算法的数学基础</h2>
 <ol>
-<li>椭圆曲线在素域<span class="arithmatex">\(Z_p\)</span>上的运算规则</li>
+<li>椭圆曲线在素域<span class="arithmatex">\(Z_p\)</span>上的运算规则<ul>
 <li>P+O=O+P=P;</li>
 <li>若P(<span class="arithmatex">\(x_1\)</span>,<span class="arithmatex">\(y_1\)</span>), Q(<span class="arithmatex">\(x_2\)</span>,<span class="arithmatex">\(y_2\)</span>)满足<span class="arithmatex">\(x_1=x_2,y_1+y_2=0\)</span>，则P+Q=O;</li>
 <li>若P(<span class="arithmatex">\(x_1\)</span>,<span class="arithmatex">\(y_1\)</span>), Q(<span class="arithmatex">\(x_2\)</span>,<span class="arithmatex">\(y_2\)</span>)不满足上面的性质，则<ul>
@@ -943,8 +1077,12 @@
 <li>若<span class="arithmatex">\(P=Q\)</span>，<span class="arithmatex">\(\lambda=(3x_1^2+a)/(2y_1)\)</span>.</li>
 </ul>
 </li>
-<li>椭圆曲线的乘法性质</li>
+</ul>
+</li>
+<li>椭圆曲线的乘法性质<ul>
 <li>若<span class="arithmatex">\(Q=k*P\)</span>(k&lt;n)，其中k是常数，Q、P是曲线上的点，则通过k,P计算Q简单，但是通过Q、P推算k较为复杂。</li>
+</ul>
+</li>
 </ol>
 <h2 id="opensslecc">OpenSSL中的ECC库</h2>
 <ul>
@@ -954,39 +1092,49 @@
 <li>G,n,余因子(1)设置group <code>EC_GROUP_set_generator(group, G, n, BN_value_one());</code></li>
 <li>获得点T的坐标(tx,ty) <code>EC_POINT_get_affine_coordinates_GFp(group,T,tx,ty,ctx)</code></li>
 <li>ECC上的加法 T = T + G <code>EC_POINT_add(group,T,T,G,ctx)</code></li>
-<li>ECC上的乘法 T = m * G <code>EC_POINT_mul(group,T,m,NULL,NULL,ctx)</code></li>
+<li>ECC上的乘法 T = m * G <code>EC_POINT_mul(group,T,m,NULL,NULL,ctx)</code><ul>
 <li>T = m * G + n * P <code>EC_POINT_mul(group,T,m,P,n,ctx)</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="ecc_3">ECC加密解密</h2>
 <ul>
 <li>公钥(公钥点) R = d * G</li>
 <li>私钥 d (d &lt; n)</li>
-<li>加密(r(x),s)</li>
-<li>r(x) = (k * G).x  ,其中k &lt; n, r(x)结果不能对n取模</li>
+<li>加密(r(x),s)<ul>
+<li>r(x) = (k * G).x mod p, 其中k &lt; n, r(x)结果不能对n取模，而是对p取模</li>
 <li>s = m * (k * R).x mod n, 其中m为明文</li>
-<li>解密(利用私钥d)</li>
+</ul>
+</li>
+<li>解密(利用私钥d)<ul>
 <li>通过r(x)推出点r</li>
 <li>m = s / (r * d).x
     = (m * (k * R).x) / (k * G * d).x
     = (m * (kd * G).x) / (kd * G).x
     = m</li>
 </ul>
+</li>
+</ul>
 <h2 id="ecc_4">ECC算法签名</h2>
 <ul>
-<li>ecdsa(elliptic curve digital signature)</li>
+<li>ecdsa(elliptic curve digital signature)<ul>
 <li>签名(r,s)<ul>
 <li>r = k * G</li>
 <li>s = (m + r * d)/k</li>
 </ul>
 </li>
 <li>验证: (m / s) * G + (r / s) * G == r</li>
-<li>ecnr</li>
+</ul>
+</li>
+<li>ecnr<ul>
 <li>签名(r,s)<ul>
 <li>r = (k * G).x + m</li>
 <li>s = k - (r * d).x</li>
 </ul>
 </li>
 <li>验证: r - (s * G + r * R) == m</li>
+</ul>
+</li>
 </ul>
 
               

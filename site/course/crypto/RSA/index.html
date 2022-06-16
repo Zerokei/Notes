@@ -384,6 +384,8 @@
         
           
         
+          
+        
       
       
         
@@ -704,6 +706,138 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Database" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/storage/" class="md-nav__link">
+        Database Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../db/">Database Index</a>
+          
+            <label for="__nav_2_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Database Index" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Database Index
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/Bplus/" class="md-nav__link">
+        B+ Tree
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/lsm/" class="md-nav__link">
+        LSM Tree
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -961,11 +1095,13 @@
 
 
 
+<h1 id="rsa">RSA</h1>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
+<ul>
+<li>2022/6/14 修正了对RSA正确性的证明 </li>
+</ul>
 </div>
-<p>修正了对RSA正确性的证明</p>
-<h1 id="rsa">RSA</h1>
 <ul>
 <li>e: 加密公钥</li>
 <li>d: 解密密钥</li>
@@ -996,19 +1132,23 @@
 </ul>
 <h2 id="rsa_1">RSA签名</h2>
 <ul>
-<li>加密邮件的步骤（信件L由A发给B）</li>
+<li>加密邮件的步骤（信件L由A发给B）<ol>
 <li>信件L用B的公钥加密</li>
 <li>把内容发给B</li>
 <li>B用私钥解密信件</li>
-<li>验证邮件的步骤（信件L由A发给B）</li>
+</ol>
+</li>
+<li>验证邮件的步骤（信件L由A发给B）<ol>
 <li>L做MD5摘要，M=MD5(L)</li>
 <li>用A的私钥进行加密 M'=RSA(M,A的私钥)</li>
 <li>把L、M'和A的公钥发送给B</li>
 <li>B用A的私钥解密 m=RSA(M',A的公钥)</li>
 <li>判断MD5(L)是否等于m</li>
+</ol>
+</li>
 </ul>
 <h2 id="rsa_2">RSA正确性证明</h2>
-<p>已知 <span class="arithmatex">\(c=m^e{\rm\ mod}\ N\)</span>, <span class="arithmatex">\(cd\equiv 1 \mod (p-1)(q-1)\)</span>, p、q互素，<span class="arithmatex">\(N=p*q\)</span>
+<p>已知 <span class="arithmatex">\(c=m^e{\rm\ mod}\ N\)</span>, <span class="arithmatex">\(ed\equiv 1 \mod (p-1)(q-1)\)</span>, p、q互素，<span class="arithmatex">\(N=p*q\)</span>
 证明 <span class="arithmatex">\(m = c^d{\rm\ mod}\ N\)</span></p>
 <h3 id="step1">Step1 公式化简</h3>
 <div class="arithmatex">\[
@@ -1037,7 +1177,7 @@
 &amp;假设 gcd(m,M)=p\ (m = cp), 则 m \equiv 1 \mod q\\
 &amp; \therefore m^{k(p-1)(q-1)} \equiv (m^{q-1})^{k(p-1)} \equiv 1\mod q\\
 &amp;令 m^{k(p-1)(q-1)}=sq+1\\
-&amp; \therefore m*m^{s(p-1)(q-1)} = m * (s*q + 1) = c*s*p*q + m =c*s*N+m\equiv m \mod N\\
+&amp; \therefore m*m^{k(p-1)(q-1)} = m * (s*q + 1) = c*s*p*q + m =c*s*N+m\equiv m \mod N\\
 \end{aligned}
 \]</div>
 <p>QED</p>

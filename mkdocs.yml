@@ -73,6 +73,13 @@ nav:
       - course/crypto/RSA.md
       - course/crypto/ECC.md
       - course/crypto/final.md
+    - Database:
+      - course/db/index.md
+      - course/db/storage.md
+      - Database Index:
+        - course/db/index/index.md
+        - course/db/index/Bplus.md
+        - course/db/index/lsm.md
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md

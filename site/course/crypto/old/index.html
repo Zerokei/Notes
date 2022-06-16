@@ -384,6 +384,8 @@
         
           
         
+          
+        
       
       
         
@@ -717,6 +719,138 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Database" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/storage/" class="md-nav__link">
+        Database Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../db/">Database Index</a>
+          
+            <label for="__nav_2_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Database Index" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Database Index
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/Bplus/" class="md-nav__link">
+        B+ Tree
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/lsm/" class="md-nav__link">
+        LSM Tree
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -988,7 +1122,13 @@
 
 
 <h1 id="_1">古典密码</h1>
-<p>明文(plaintext) ---&gt; 密文(ciphertext)</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>2022/6/14 修改Enigma加密流程图</li>
+<li>2022/6/14 添加double stepping示意图</li>
+</ul>
+</div>
 <h2 id="_2">单表密码</h2>
 <ul>
 <li>使用明文密文对照表</li>
@@ -1024,13 +1164,13 @@ Kenngrunppen: 和日期对应 方便情报归类
 </ul>
 <h3 id="_6">具体加密流程</h3>
 <div class="highlight"><pre><span></span><code>plaintext -&gt; wiring board 
-          -&gt; +delta1 -&gt; rotor1 
-          -&gt; +delta2 -&gt; rotor2 
-          -&gt; +delta3 -&gt; rotor3 
+          -&gt; +delta1 -&gt; rotor1 -&gt; -delta1
+          -&gt; +delta2 -&gt; rotor2 -&gt; -delta2
+          -&gt; +delta3 -&gt; rotor3 -&gt; -delta3
           -&gt; reflactor 
-          -&gt; rotor3 -&gt; -delta3
-          -&gt; rotor2 -&gt; -delta2
-          -&gt; rotor3 -&gt; -delta1 
+          -&gt; +delta3 -&gt; rotor3 -&gt; -delta3
+          -&gt; +delta2 -&gt; rotor2 -&gt; -delta2
+          -&gt; +delta1 -&gt; rotor3 -&gt; -delta1 
           -&gt; wiring board 
                                 -&gt; cripertext
 </code></pre></div>
@@ -1039,13 +1179,18 @@ Kenngrunppen: 和日期对应 方便情报归类
 <p>QEVJZ<br />
 RFWKA  </p>
 <ol>
-<li>常规跳转</li>
+<li>常规跳转<ul>
 <li>每按一下，齿轮I跳转一下</li>
 <li>当齿轮I从位置Q转到R时，齿轮Ⅱ被带动跳转一下</li>
-<li>double stepping</li>
+</ul>
+</li>
+<li>double stepping<ul>
 <li>当齿轮I从位置Q转到R时，齿轮Ⅱ被带动跳转</li>
 <li>若此时齿轮Ⅱ是从D跳转到E，则下一次齿轮Ⅱ从E跳转到F，并带动齿轮Ⅲ跳转</li>
 <li>可以理解为 I=Q,Ⅱ=D,Ⅲ=X -&gt; I=R,Ⅱ=E,Ⅲ=X -&gt; I=S,Ⅱ=F,Ⅲ=X+1</li>
+<li><img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220614191953.png" /></li>
+</ul>
+</li>
 </ol>
 
               

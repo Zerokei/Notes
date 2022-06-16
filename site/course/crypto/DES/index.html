@@ -384,6 +384,8 @@
         
           
         
+          
+        
       
       
         
@@ -677,6 +679,138 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Database" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/storage/" class="md-nav__link">
+        Database Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../db/">Database Index</a>
+          
+            <label for="__nav_2_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Database Index" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Database Index
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/Bplus/" class="md-nav__link">
+        B+ Tree
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/lsm/" class="md-nav__link">
+        LSM Tree
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -908,6 +1042,12 @@
 
 
 <h1 id="des">DES</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>2022/6/14 DES加密过程补充（R(48)和key异或）</li>
+</ul>
+</div>
 <p>Data Encryption Standard<br />
 密钥长度为64bit<br />
 明文加密可采用ECB、CBC、CFB  </p>
@@ -915,32 +1055,45 @@
 <p><img alt="" src="https://s2.loli.net/2022/04/02/cQjivrnl1ZwLfuJ.png" /></p>
 <h2 id="_2">密钥处理</h2>
 <ul>
-<li>key密钥</li>
+<li>key密钥<ul>
 <li>密钥，64bit</li>
 <li>经过处理生成16个48bit的key，用于16轮加密循环</li>
-<li>key初始化</li>
+</ul>
+</li>
+<li>key初始化<ul>
 <li>用户指定初始密钥</li>
 <li><code>key_perm_table</code>: 从8字节的key中选择56bit，并拆分成左右两半(28bit+28bit)</li>
-<li>key循环过程</li>
+</ul>
+</li>
+<li>key循环过程<ol>
 <li><code>key_rol_steps</code>，两个28bit分别循环左移</li>
 <li><code>key_56bit_to_48bit_table</code>: 从56bit中选出48个bit</li>
-<li>继续执行1</li>
+<li>继续执行步骤a</li>
+</ol>
+</li>
 </ul>
 <h2 id="des_1">DES加密</h2>
 <ul>
-<li>IP(64bit-&gt;64bit)</li>
+<li>IP(64bit-&gt;64bit)<ul>
 <li>置换</li>
 <li>使用perm进行查表优化</li>
-<li>f(R(32),key(48)) (32bit-&gt;32bit)</li>
+</ul>
+</li>
+<li>f(R(32),key(48)) (32bit-&gt;32bit)<ul>
 <li>经过位选择函数E R(32)-&gt;R(48) (32bit-&gt;48bit)</li>
+<li>R(48)和key(48)异或</li>
 <li>S盒 <code>char S[8][64]</code> <code>8*(a1a2a3a4a5a6) = 8*S[a1a6][a2a3a4a5]</code> (48bit-&gt;32bit)<ul>
 <li><img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220604121538.png" /></li>
 </ul>
 </li>
 <li>置换函数P(32bit-&gt;32bit)</li>
-<li>FP(64bit-&gt;64bit)</li>
+</ul>
+</li>
+<li>FP(64bit-&gt;64bit)<ul>
 <li>IP-1，IP的逆运算</li>
 <li>使用perm进行查表优化</li>
+</ul>
+</li>
 </ul>
 <h2 id="des_2">三重DES</h2>
 <p>c = E(D(E(p,k1), k2), k3)<br />
