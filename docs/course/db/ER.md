@@ -3,9 +3,9 @@ date-created: 2022-06-16 13:38
 date-updated: 2022-06-16 19:37
 ---
 
-# E-R model and Normal Form
+# E-R Model and Normal Form
 
-## E-R model
+## E-R Model
 
 ### Basic Concepts
 
