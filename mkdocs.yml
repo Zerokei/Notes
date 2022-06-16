@@ -37,10 +37,10 @@ theme:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
-  # admonition
-  - admonition 
-  - pymdownx.details
-  - pymdownx.superfences
+  - admonition   # 提示块
+  - pymdownx.details # 提示块可折叠
+  - pymdownx.superfences # 代码嵌套在列表里
+  - pymdownx.mark  # 文本高亮
 
 extra_javascript:
   - javascripts/mathjax.js
