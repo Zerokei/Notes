@@ -3,8 +3,6 @@ date-created: 2022-06-16 13:27
 date-updated: 2022-06-16 14:16
 ---
 
-#db
-
 # Relational Model
 
 ## 基本结构
