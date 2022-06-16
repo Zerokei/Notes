@@ -75,7 +75,7 @@ nav:
       - course/crypto/final.md
     - Database:
       - course/db/index.md
-      - couese/db/algebra.md
+      - course/db/algebra.md
       - course/db/storage.md
       - Database Index:
         - course/db/index/index.md
