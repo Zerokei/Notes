@@ -206,7 +206,7 @@ end
 
 		- 若共同属性是r的key: ${\rm size} \le n_s$ ![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616100956.png)
 
-		- 若共同属性是s到r的foregin key: $n_r$![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616101006.png)
+		- 若共同属性是s到r的foregin key: $n_s$![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616101006.png)
 
 		- 若共同属性不是key: $\min(\frac{n_s\cdot n_r}{V(A,s)}, \frac{n_s\cdot n_r}{V(A,r)})$![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616101205.png)
 	- 投影: $\Pi(s)$: $V(A,r)$
