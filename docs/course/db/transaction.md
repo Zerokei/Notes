@@ -56,6 +56,7 @@ date-updated: 2022-06-17 08:19
 	- 两个变种
 		- 严格两阶段封锁协议(strict two-phase locking protocol)：要求事务持有的 X 锁必须在 事务提交之后方可释放。解决级联回滚的问题。
 		- 强两阶段封锁协议(rigorous two-phase locking protocol)：要求事务提交前不得释放 任何锁。
+    - ![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220617160816.png)
 - 锁转换(Lock Conversions)：提供了一种将 S 锁升级为 X 锁，X 锁降级为 S 锁的机制。只能在增 长阶段升级，缩减阶段降级。
 - DeadLock
 	- 互相持有锁的时候触发死锁
