@@ -19,8 +19,8 @@ date-updated: 2022-06-16 11:20
 ### Selection
 
 - Linear Search(equality on key): 线性搜索
-	- worst cost: $b_r * t_T + t_S$ （关系表存放在$b_r$个block中）
-	- average cost: $(b_r/2)*t_T + t_S$
+	- worst cost: $b_r * t_T + t_S$ (关系表存放在$b_r$个block中)
+	- average cost: $(b_r/2)*t_T + t_S$ (在查询值为主码的情况下)
 - Primary B+-Tree index(equality on key): B+树主索引搜索
 	- Cost: $(h_i+1)*(t_T+t_S)$，$h_i$是B+树的高度，每次需要从Disk中Seek该块并读入，而后面的1是指最后找到目标块时，需要进行seek+transfer(使用Index必不可少的)
 - Primary B+-Tree index(equality on nonkey): B+树主索引，单值(非唯一)
