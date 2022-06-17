@@ -144,7 +144,7 @@ end
 		- 匹配过程中直接取Hash块，共$2n_h$
 - 若有递归划分
 	- 递归划分的原则是，每次将划分的大小降为原来的$M-1$，直至每个划分的最多占$M$块为止（使得内存能够容纳下，以便于建立索引）
-	- block transfer: $2(b_r+b_s)\lceil log_{M-1}(b_s)-1\rceil+b_r+b_n$
+	- block transfer: $2(b_r+b_s)\lceil log_{M-1}(b_s)-1\rceil+b_r+b_s$
 		- 共进行$\lceil log_{M-1}(b_s)-1\rceil$轮
 		- 其余参照没有递归划分的情况
 	- seek times: $2(\lceil b_r/b_b\rceil +\lceil b_s/b_b\rceil)\lceil log_{M-1}(b_s)-1\rceil+2n_h$
