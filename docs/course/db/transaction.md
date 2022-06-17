@@ -114,12 +114,11 @@ date-updated: 2022-06-17 08:19
 		- 否则从磁盘中读取这一页，如果磁盘中得到的这一页的PageLSN比这一条要小，就redo，否则就忽略这一条记录
 	- Undo阶段
 		- 从日志末尾先前向前搜索，undo所有undo-list中有的事务
-		- 符合如下条件的记录可以跳过
-			- 用分析阶段的最后一个LSN来找到每个日志最后的记录
-			- 每次选择一个最大的LSN对应的事务undo
-			- 在undo一条记录之后
-				- 对于普通的记录，将NextLSN设置为PrevLSN
-				- 对于CLR记录，将NextLSN设置为UndoNextLSN
+		- 用分析阶段的最后一个LSN来找到每个日志最后的记录
+        - 每次选择一个最大的LSN对应的事务undo
+        - 在undo一条记录之后
+            - 对于普通的记录，将NextLSN设置为PrevLSN
+            - 对于CLR记录，将NextLSN设置为UndoNextLSN
         - 如何undo：当一条记录undo的时候
             - 生成一个包含执行操作的CLR
             - 设置CLR的UndoNextLSN为更新记录的LSN
