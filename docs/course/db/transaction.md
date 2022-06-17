@@ -63,7 +63,7 @@ date-updated: 2022-06-17 08:19
 	- 通过画依赖图判断是否产生死锁
 	- 死锁恢复：选取一些事务进行回滚。当重复选取同样的事务牺牲(victim)并不断陷入死锁时，即陷入starvation(饥饿)
 
-## 恢复系统
+## Recovery System
 
 ### log-based Recovery 基于日志的恢复
 
