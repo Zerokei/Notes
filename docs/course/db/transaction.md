@@ -120,8 +120,8 @@ date-updated: 2022-06-17 08:19
 			- 在undo一条记录之后
 				- 对于普通的记录，将NextLSN设置为PrevLSN
 				- 对于CLR记录，将NextLSN设置为UndoNextLSN
-			- 如何undo：当一条记录undo的时候
-				- 生成一个包含执行操作的CLR
-				- 设置CLR的UndoNextLSN为更新记录的LSN
+        - 如何undo：当一条记录undo的时候
+            - 生成一个包含执行操作的CLR
+            - 设置CLR的UndoNextLSN为更新记录的LSN
 
 ![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220617080800.png)
