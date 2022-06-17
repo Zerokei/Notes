@@ -71,7 +71,7 @@ date-updated: 2022-06-16 19:37
 - 性质：任意函数依赖$\alpha\to\beta$至少满足下面任意一项
 	- $\alpha\to\beta$是平凡的
 	- $\alpha$是$R$的一个超码
-- 判断函数依赖$\alpha\to\beta$是否违反了BCNF：计算$\alpha^{+}$，若其既不是$\beta$(平凡的)，也不是所有元素的集合(不是超码)，则不是BNCF
+- 判断函数依赖$\alpha\to\beta$是否违反了BCNF：计算$\alpha^{+}$，若其既不是$\beta$(平凡的)，也不是所有元素的集合(不是超码)，则不是BCNF
 - BCNF分解（同时也是无损分解）
 	- Suppose we have a schema R and a non-trivial dependency $\alpha \to \beta$ causes a violation of BCNF.We decompose _R_ into: $(\alpha \cup \beta)$ and $(R-(\beta-\alpha))$
 
