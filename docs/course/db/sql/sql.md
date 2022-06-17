@@ -114,7 +114,7 @@ with max_budget(value) as
 	 from department)
 select budget
 from department, max_budget
-where department, budget = max_budget.value
+where department.budget = max_budget.value
 ```
 
 ### 创建索引/视图

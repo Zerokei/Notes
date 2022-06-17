@@ -32,12 +32,12 @@ date-updated: 2022-06-16 19:37
 
 ### Reduction of an E-R  Schema to Tables
 
-(1) Representing Relationshp Sets as Tables
-(2) Representing Weak Entity Sets
-(3) Redundancy of Tables
-1> Many-to-one/one-to-many -> relationship sets add to "many" side
-2> one-to-one -> relationship sets add to any side
-(4) Representing Specialization as Tables
+(1) Representing Relationshp Sets as Tables  
+(2) Representing Weak Entity Sets  
+(3) Redundancy of Tables   
+1> Many-to-one/one-to-many -> relationship sets add to "many" side  
+2> one-to-one -> relationship sets add to any side  
+(4) Representing Specialization as Tables  
 
 ## Normal Form
 
