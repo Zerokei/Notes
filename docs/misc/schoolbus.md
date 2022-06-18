@@ -30,7 +30,7 @@ http://10.214.160.13:10000/1.php.bak
 
 跨脚本漏洞XSS
 
-相关阅读[https://tech.meituan.com/2018/09/27/fe-security.html]
+[相关阅读](https://tech.meituan.com/2018/09/27/fe-security.html)
 
 目前使用chrome破解失败了
 
@@ -54,7 +54,7 @@ http://10.214.160.13:10000/1.php.bak
 
 #### SQLMAP的使用
 
-(基本操作)[https://www.jianshu.com/p/63becdb8c2f8]
+[基本操作](https://www.jianshu.com/p/63becdb8c2f8)
 
 思路：获取数据库名称，得知所需要的表名，获取列名，获取指定列名字段
 
@@ -97,7 +97,7 @@ sqlmap.py -u http://10.214.160.13:10002/?questionid=0 -D aaa_web2 -T flag_is_her
 
 ### calculator
 
-(基本操作)[https://ce2191210307.gitee.io/2020/06/03/pwntools%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8Apwn%E5%85%A5%E9%97%A8/]
+[基本操作](https://ce2191210307.gitee.io/2020/06/03/pwntools%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8Apwn%E5%85%A5%E9%97%A8/)
 
 #### Description
 
@@ -108,7 +108,7 @@ nc是Linux自带的工具，用于与服务器建立socket连接
 
 #### Solution
 
-[入门链接]: https://ce2191210307.gitee.io/2020/06/03/pwntools%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8Apwn%E5%85%A5%E9%97%A8/
+[入门链接](https://ce2191210307.gitee.io/2020/06/03/pwntools%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8Apwn%E5%85%A5%E9%97%A8/)
 
 注意bytes类和string类的区别与相互转换
 
