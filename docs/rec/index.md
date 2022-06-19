@@ -15,6 +15,7 @@
 - [The Missing Semester of Your CS Education|CS前置知识](https://missing-semester-cn.github.io/)
 - [哔哩哔哩蒋炎岩|操作系统/计算机系统基础](https://space.bilibili.com/202224425)
 - [Learn X in Y minutes|快速入门一门编程语言](https://learnxinyminutes.com/)
+- [老石谈芯|芯片领域科普](https://space.bilibili.com/612932327)
 
 ## 推荐软件
 
