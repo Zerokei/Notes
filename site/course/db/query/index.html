@@ -643,6 +643,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -750,6 +754,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../ER/" class="md-nav__link">
+        E-R Model and Normal Form
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../storage/" class="md-nav__link">
         Database Storage
       </a>
@@ -767,7 +785,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" type="checkbox" id="__nav_2_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" type="checkbox" id="__nav_2_3_5" >
       
       
       
@@ -787,14 +805,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../index/">Database Index</a>
           
-            <label for="__nav_2_3_4">
+            <label for="__nav_2_3_5">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Database Index" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_3_4">
+        <label class="md-nav__title" for="__nav_2_3_5">
           <span class="md-nav__icon md-icon"></span>
           Database Index
         </label>
@@ -960,6 +978,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transaction/" class="md-nav__link">
+        Transaction
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1101,12 +1133,18 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../misc/">Misc</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -1117,6 +1155,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/schoolbus/" class="md-nav__link">
+        ZJU SchoolBus Writeup
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -1256,8 +1308,8 @@
 <h3 id="selection">Selection</h3>
 <ul>
 <li>Linear Search(equality on key): 线性搜索<ul>
-<li>worst cost: <span class="arithmatex">\(b_r * t_T + t_S\)</span> （关系表存放在<span class="arithmatex">\(b_r\)</span>个block中）</li>
-<li>average cost: <span class="arithmatex">\((b_r/2)*t_T + t_S\)</span></li>
+<li>worst cost: <span class="arithmatex">\(b_r * t_T + t_S\)</span> (关系表存放在<span class="arithmatex">\(b_r\)</span>个block中)</li>
+<li>average cost: <span class="arithmatex">\((b_r/2)*t_T + t_S\)</span> (在查询值为主码的情况下)</li>
 </ul>
 </li>
 <li>Primary B+-Tree index(equality on key): B+树主索引搜索<ul>
@@ -1363,7 +1415,7 @@ end
 </ul>
 <p>(3) Indexed Nested-Loop Join</p>
 <ul>
-<li>原理：外层遍历tuple，内层使用索引匹配（如B+树索引等）</li>
+<li>原理：外层遍历tuple(每次读取一个block)，内层使用索引匹配（如B+树索引等）</li>
 <li>最坏情况（只能载入两个block，r/s各一个）</li>
 <li>因为索引本身的复杂度较复杂，故只给出较粗略的估算<span class="arithmatex">\(b_r*(t_T+t_S)+n_r*c\)</span><ul>
 <li>其中<span class="arithmatex">\(c\)</span>指单次查询的平均开销</li>
@@ -1416,7 +1468,7 @@ end
 </li>
 <li>若有递归划分<ul>
 <li>递归划分的原则是，每次将划分的大小降为原来的<span class="arithmatex">\(M-1\)</span>，直至每个划分的最多占<span class="arithmatex">\(M\)</span>块为止（使得内存能够容纳下，以便于建立索引）</li>
-<li>block transfer: <span class="arithmatex">\(2(b_r+b_s)\lceil log_{M-1}(b_s)-1\rceil+b_r+b_n\)</span><ul>
+<li>block transfer: <span class="arithmatex">\(2(b_r+b_s)\lceil log_{M-1}(b_s)-1\rceil+b_r+b_s\)</span><ul>
 <li>共进行<span class="arithmatex">\(\lceil log_{M-1}(b_s)-1\rceil\)</span>轮</li>
 <li>其余参照没有递归划分的情况</li>
 </ul>
@@ -1493,7 +1545,7 @@ end
 <p>若共同属性是r的key: <span class="arithmatex">\({\rm size} \le n_s\)</span> <img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616100956.png" /></p>
 </li>
 <li>
-<p>若共同属性是s到r的foregin key: <span class="arithmatex">\(n_r\)</span><img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616101006.png" /></p>
+<p>若共同属性是s到r的foregin key: <span class="arithmatex">\(n_s\)</span><img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616101006.png" /></p>
 </li>
 <li>
 <p>若共同属性不是key: <span class="arithmatex">\(\min(\frac{n_s\cdot n_r}{V(A,s)}, \frac{n_s\cdot n_r}{V(A,r)})\)</span><img alt="" src="https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220616101205.png" /></p>
@@ -1545,13 +1597,13 @@ end
       
       
         
-        <a href="../../../tutorials/" class="md-footer__link md-footer__link--next" aria-label="下一页: Introduction" rel="next">
+        <a href="../transaction/" class="md-footer__link md-footer__link--next" aria-label="下一页: Transaction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Introduction
+              Transaction
             </div>
           </div>
           <div class="md-footer__button md-icon">

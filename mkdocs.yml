@@ -90,6 +90,7 @@ nav:
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
+    - tutorials/rsshub.md
   - Recommendation:
     - rec/index.md
   - Misc: 
