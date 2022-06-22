@@ -1,6 +1,6 @@
 ---
 date-created: 2022-05-09 13:36
-date-updated: 2022-06-22 19:05
+date-updated: 2022-06-22 19:22
 ---
 
 # Approximation
@@ -13,11 +13,14 @@ If an algorithm achieves an approximation ratio of $\rho(n)$, we call it a $\rho
 
 ## polynomial-time approximation scheme(PTAS)
 
-An approximation scheme is a _polynomial-time approximation scheme_ if for any fixed $\epsilon > 0$, the scheme runs in time polynomial in the size of its input instance. e.g. $O(n^{2/\epsilon})$
+An approximation scheme is a _polynomial-time approximation scheme_ if for any fixed $\epsilon > 0$, $ratio\le 1+\epsilon$, the scheme runs in time polynomial in the size of its input instance. e.g. $O(n^{2/\epsilon})$
 
 ## fully time approximation scheme(FPTAS)
 
 As a special case of PTAS, the run-time of an FPTAS is polynomial in the problem size and in $1/\epsilon$ e.g.$O((1/\epsilon)^2n^3)$
+
+FPTAS与PTAS的关系可由下图表示：
+![](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/20220622193831.png)
 
 ## Bin Packing Problem
 
