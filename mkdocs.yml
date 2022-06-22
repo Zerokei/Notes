@@ -90,6 +90,7 @@ nav:
     - Advanced Data Structure and Algorithms:
       - course/ads/index.md
       - course/ads/np.md
+      - course/ads/appr.md
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
