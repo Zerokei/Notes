@@ -61,7 +61,7 @@ nav:
     - index.md
   - Course:
     - course/index.md
-    - Crypto:
+    - Cryptography:
       - course/crypto/index.md
       - course/crypto/Math.md
       - course/crypto/old.md
@@ -87,6 +87,9 @@ nav:
         - course/db/index/lsm.md
       - course/db/query.md
       - course/db/transaction.md
+    - Advanced Data Structure and Algorithms:
+      - course/ads/index.md
+      - course/ads/np.md
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
