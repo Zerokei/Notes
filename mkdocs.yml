@@ -73,7 +73,7 @@ nav:
       - course/crypto/RSA.md
       - course/crypto/ECC.md
       - course/crypto/final.md
-    - Database:
+    - Database System:
       - course/db/index.md
       - Relational Model & SQL:
         - course/db/sql/index.md
