@@ -32,6 +32,11 @@ To prove a reduction $A\le_P B$ , we require 3 steps
 2. for all $x \in A$, then $f(x) \in B$
 3. If $f(x)\in B$, then $x\in A$
 
+如果 $Q_1\le_p Q_2$, 我们可以认为：
+
+- A polynomial-time algorithm for $Q_2$ would sufficiently **imply a polynomial-time algorithm** for $Q_1$.
+- $Q_1$ can be polynomially reduced to $Q_2$
+
 ### 常见 NPC 问题
 
 - SAT Problem(第一个被证明为 NPC 的问题): 给定一个n个布尔变量组成的布尔表达式，判断其有没有可能为真
