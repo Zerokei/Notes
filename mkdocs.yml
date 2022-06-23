@@ -92,6 +92,7 @@ nav:
       - course/ads/np.md
       - course/ads/appr.md
       - course/ads/local.md
+      - course/ads/random.md
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
