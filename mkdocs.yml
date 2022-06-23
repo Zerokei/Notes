@@ -90,6 +90,7 @@ nav:
     - Advanced Data Structure and Algorithms:
       - course/ads/avl.md
       - course/ads/splay.md
+      - course/ads/rb.md
       - course/ads/index.md
       - course/ads/back.md
       - course/ads/divide.md
