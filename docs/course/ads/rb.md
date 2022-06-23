@@ -1,7 +1,7 @@
 ---
 date created: 2022-04-18 09:03
 date updated: 2022-04-18 09:29
-date-updated: 2022-06-23 20:33
+date-updated: 2022-06-23 21:08
 ---
 
 # Red-Black Trees
@@ -40,7 +40,7 @@ date-updated: 2022-06-23 20:33
 - Delete a leaf node: Reset its parent link to NIL
 - Delete a degree 1 node: **Replace** the node by its single child
 - Delete a degree 2 node: **Replace** the node by the largest one in the left subtree or the smallest one in the right subtree.
-- **the number of rotations in the DELETE operation is $O(1)$.**
+- **the number of rotations in the DELETE operation is $O(1)$.红黑树在Insert中旋转次数不超过2，删除的过程中旋转次数不超过3**
 
 ### How to Replace
 
