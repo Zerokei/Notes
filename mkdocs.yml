@@ -89,6 +89,7 @@ nav:
       - course/db/transaction.md
     - Advanced Data Structure and Algorithms:
       - course/ads/index.md
+      - course/ads/back.md
       - course/ads/np.md
       - course/ads/appr.md
       - course/ads/local.md
