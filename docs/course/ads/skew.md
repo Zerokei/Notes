@@ -5,7 +5,7 @@ date-updated: 2022-06-23 22:07
 
 # Skew Heaps
 
-a simple version of the [[C01N-Leftlist Heaps]]
+a simple version of the [C01N-Leftlist Heaps](left.md)
 
 ## Character
 
