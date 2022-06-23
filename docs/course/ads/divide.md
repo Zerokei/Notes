@@ -1,6 +1,6 @@
 ---
 date-created: 2022-06-23 15:54
-date-updated: 2022-06-23 16:21
+date-updated: 2022-06-23 19:21
 ---
 
 # Divide and Conquer
@@ -34,3 +34,16 @@ The recurrence $T(N)=aT(N/b)+f(N)$
 1. If $f(N)=O(N^{\log_b^{a-\epsilon}})$ for some constant $\epsilon>0$, then $T(N)=\Theta(N^{\log_b{a}})$
 2. If $f(N)=\Theta(N^{\log_b{a}})$, then $T(N)=\Theta(N^{\log_b{a}}\log{N})$
 3. If $f(N)=\Omega(N^{\log_{b}{a+\epsilon}})$, for some constant $\epsilon>0$, and if $af(N/b)<cf(N)$ for some constant $c<1$ and all sufficiently large $N$, then $T(N)=\Theta(f(N))$
+
+## Special case
+
+求解：$T(N)=2T(\sqrt{N})+\log{N}$
+
+$$
+\begin{aligned}
+&let\ N = 2^m\\
+&thus\ T(N)=2T(\sqrt{N})+\log{N}\to T(2^m)=T(2^{\frac{m}{2}})+m\\
+&let\ G(m)=T(2^m)\\
+&thus\ G(m)=G(m/2)+m \to G(m)=m\log{m}=\log{n}\log\log{n}
+\end{aligned}
+$$
