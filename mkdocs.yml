@@ -94,6 +94,7 @@ nav:
       - course/ads/local.md
       - course/ads/random.md
       - course/ads/para.md
+      - course/ads/external.md
   - Tutorials: 
     - tutorials/index.md
     - tutorials/mkdocs.md
