@@ -6,7 +6,7 @@ date-updated: 2022-06-23 15:02
 # External Sorting
 
 !!! tip
-    - 在 ![Database Query Process](../db/query.md) 中提到过External Sort。
+    - 在 [Database Query Process](../db/query.md) 中提到过External Sort。
 
 ## What are the concerns
 
