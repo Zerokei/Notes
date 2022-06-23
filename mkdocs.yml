@@ -88,10 +88,11 @@ nav:
       - course/db/query.md
       - course/db/transaction.md
     - Advanced Data Structure and Algorithms:
+      - course/ads/index.md
       - course/ads/avl.md
       - course/ads/splay.md
       - course/ads/rb.md
-      - course/ads/index.md
+      - course/ads/inverse.md
       - course/ads/back.md
       - course/ads/divide.md
       - course/ads/dp.md
