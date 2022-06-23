@@ -1,9 +1,9 @@
 ---
 date-created: 2022-04-18 08:48
-date-updated: 2022-06-23 21:47
+date-updated: 2022-06-23 22:43
 ---
 
-# Leftlist Heaps
+# Leftist Heaps
 
 ## Definition of NPL
 
