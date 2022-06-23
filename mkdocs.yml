@@ -91,6 +91,7 @@ nav:
       - course/ads/index.md
       - course/ads/back.md
       - course/ads/dp.md
+      - course/ads/greedy.md
       - course/ads/np.md
       - course/ads/appr.md
       - course/ads/local.md
