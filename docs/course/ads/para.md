@@ -91,9 +91,9 @@ $$
 
 - 方根分组法：把序列分成$\sqrt{n}$组，递归此方法，在找到最大值后，使用大功率跑车法合并
 	- 有$T(n)\le T(\sqrt{n})+1$，$W(n)\le\sqrt{n}W(\sqrt{n})+n$
-	- $T(N)=O(\log\log{n})$
-	- $W(n)=O(n\log\log{n})$
-- 双对数分组法: 把序列分成$\log\log{n}$组，递归此方法，在找到最大值后，使用大功率跑车法合并
+	- $T(N)=O(\log\log{N})$
+	- $W(N)=O(N\log\log{N})$
+- 双对数分组法: 把序列分成$N/\log\log{n}$组，递归此方法，在找到最大值后，使用大功率跑车法合并
 	- 有$T(n)\le T(n/\log\log{n})+1$，$W(n)\le(n/\log\log{n})W(n/\log\log{n})+n$
 	- $T(N)=O(\log\log{N})$
 	- $W(N)=O(N)$
