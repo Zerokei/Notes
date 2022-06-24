@@ -15,7 +15,7 @@ If an algorithm achieves an approximation ratio of $\rho(n)$, we call it a $\rho
 
 An approximation scheme is a _polynomial-time approximation scheme_ if for any fixed $\epsilon > 0$, $ratio\le 1+\epsilon$, the scheme runs in time polynomial in the size of its input instance. e.g. $O(n^{2/\epsilon})$
 
-## fully time approximation scheme(FPTAS)
+## fully polynomial-time approximation scheme(FPTAS)
 
 As a special case of PTAS, the run-time of an FPTAS is polynomial in the problem size and in $1/\epsilon$ e.g.$O((1/\epsilon)^2n^3)$
 
