@@ -110,6 +110,7 @@ nav:
     - tutorials/index.md
     - tutorials/mkdocs.md
     - tutorials/rsshub.md
+    - tutorials/ubuntu.md
   - Recommendation:
     - rec/index.md
   - Misc: 
