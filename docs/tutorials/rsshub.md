@@ -1,4 +1,4 @@
-# RSSHub
+# RSSHub 使用记录
 !!! note
     目前采用的是docker部署，长期使用比较稳定，缺点可能是为配合RSSHub radar，需要偶尔手动更新docker镜像。
 ## RSSHub安装
