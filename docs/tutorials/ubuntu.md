@@ -123,7 +123,7 @@ $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
-### docker 解决qemu-system-mipsel版本问题
+### docker 解决 qemu-system-mipsel 版本问题
 ```bash
 $ sudo docker pull ubuntu:20.04
 $ sudo docker run -it -name ubuntu20 -v ~:/ccc ubuntu:20.04 /bin/bash #命名 目录挂载
