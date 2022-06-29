@@ -104,8 +104,9 @@ $ sudo apt-get install sbt
 $ sudo apt-get install verilator
 ```
 
-### 9. docker安装
+## 9. docker安装
 [参考安装文章](https://docs.docker.com/engine/install/ubuntu/#installation-methods) 
+
 ```bash
 $ sudo apt-get update
 $ sudo apt-get install \
@@ -121,3 +122,18 @@ $  echo \
 $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
+
+### docker 解决qemu-system-mipsel版本问题
+```bash
+$ sudo docker pull ubuntu:20.04
+$ sudo docker run -it -name ubuntu20 -v ~:/ccc ubuntu:20.04 /bin/bash #命名 目录挂载
+$ sudo docker start ubuntu20
+$ sudo docker exec -it ubuntu20 /bin/bash
+```
+
+```bash
+$ apt-get update    
+$ apt-cache madison qemu-system-mips # 查看可用版本
+$ apt install qemu-system-mips=1:4.2-3ubuntu6.23
+```
+然后重复8中的步骤
