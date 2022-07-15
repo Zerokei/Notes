@@ -137,3 +137,8 @@ $ apt-cache madison qemu-system-mips # 查看可用版本
 $ apt install qemu-system-mips=1:4.2-3ubuntu6.23
 ```
 然后重复8中的步骤
+
+## 其他一些软件的安装
+```bash
+sudo apt-get install p7zip-full # 7-zip
+```
