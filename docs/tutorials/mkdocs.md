@@ -13,7 +13,7 @@ mkdocs new .
 设置material主题
 
 ```yml
-#添加下列代码
+
 theme:
   name: material
 ```

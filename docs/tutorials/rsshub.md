@@ -19,4 +19,4 @@ $ docker pull diygod/rsshub
 $ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 ```
 ## Reference
-- [RSSHub Docker部署](https://docs.rsshub.app/install/#docker-bu-shu)
+- [RSSHub Docker部署](https://docs.rsshub.app/install/

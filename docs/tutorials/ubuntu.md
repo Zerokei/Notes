@@ -105,7 +105,7 @@ $ sudo apt-get install verilator
 ```
 
 ## 9. docker安装
-[参考安装文章](https://docs.docker.com/engine/install/ubuntu/#installation-methods) 
+[参考安装文章](https://docs.docker.com/engine/install/ubuntu/ 
 
 ```bash
 $ sudo apt-get update
@@ -126,7 +126,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plug
 ### docker 解决 qemu-system-mipsel 版本问题
 ```bash
 $ sudo docker pull ubuntu:20.04
-$ sudo docker run -it -name ubuntu20 -v ~:/ccc ubuntu:20.04 /bin/bash #命名 目录挂载
+$ sudo docker run -it -name ubuntu20 -v ~:/ccc ubuntu:20.04 /bin/bash  目录挂载
 $ sudo docker start ubuntu20
 $ sudo docker exec -it ubuntu20 /bin/bash
 ```

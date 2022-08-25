@@ -5,9 +5,9 @@ date-updated: 2022-08-25 21:47
 
 # Artificial Neural Network
 
-```ad-info
-主要摘自《Ascend AI Processor Architecture and Programming: Principles and Applications of CANN》中基础理论方面的介绍。
-```
+!!! info
+	主要摘自《Ascend AI Processor Architecture and Programming: Principles and Applications of CANN》中基础理论方面的介绍。
+
 
 ## 0 Neuron model
 
