@@ -41,7 +41,7 @@ markdown_extensions:
   - pymdownx.details # 提示块可折叠
   - pymdownx.superfences # 代码嵌套在列表里
   - pymdownx.mark  # 文本高亮
-
+  - footnotes # 脚注
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
