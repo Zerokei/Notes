@@ -116,6 +116,7 @@ nav:
     - rec/index.md
   - Misc: 
     - misc/index.md
+    - misc/verilog.md
     - misc/code.md
     - misc/ann.md
     - misc/schoolbus.md
