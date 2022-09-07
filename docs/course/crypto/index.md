@@ -9,4 +9,4 @@
 ## References
 
 - [往年的考察知识点](https://github.com/QSCTech/zju-icicles/blob/master/%E5%AF%86%E7%A0%81%E5%AD%A6/%E8%80%83%E8%AF%95%E8%8C%83%E5%9B%B4%2B%E7%AE%80%E7%AD%94by%20xw.txt)
-- [一位学长Notion笔记](https://yinwhe.notion.site/ab6585c07ceb48e6881201c1e245f278
+- [一位学长Notion笔记](https://yinwhe.notion.site/ab6585c07ceb48e6881201c1e245f278)
