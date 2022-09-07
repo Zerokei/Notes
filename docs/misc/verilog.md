@@ -1,6 +1,6 @@
 ---
 date-created: 2022-09-05 09:59
-date-updated: 2022-09-07 11:13
+date-updated: 2022-09-07 11:50
 ---
 
 # Verilog 语法手册
@@ -12,6 +12,7 @@ date-updated: 2022-09-07 11:13
 ## 0 推荐资料
 
 - [USTC Verilog OJ | 掌握 Verilog 基础语法与易错点](https://verilogoj.ustc.edu.cn/oj/)
+- [Synthesizable Coding of Verilog | 阅读17-31页](http://www.ee.ncu.edu.tw/~jfli/vlsidi/lecture/Verilog-2012.pdf)
 
 ## 1 语法补充
 
@@ -164,6 +165,15 @@ always @(*) begin
 	    shut_off_computer = 1;
     else 
 		shut_off_computer = 0;
+end
+```
+
+### 3.2 组合逻辑中自我反馈
+
+```verilog
+// 错误示范
+always @(*) begin // 组合逻辑
+	a = a + 1; // 自我反馈
 end
 ```
 
