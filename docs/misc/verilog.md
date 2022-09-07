@@ -1,6 +1,6 @@
 ---
 date-created: 2022-09-05 09:59
-date-updated: 2022-09-05 22:51
+date-updated: 2022-09-07 11:13
 ---
 
 # Verilog 语法手册
@@ -13,7 +13,7 @@ date-updated: 2022-09-05 22:51
 
 - [USTC Verilog OJ | 掌握 Verilog 基础语法与易错点](https://verilogoj.ustc.edu.cn/oj/)
 
-## 1 常见语法
+## 1 语法补充
 
 ### 1.1 Case
 
@@ -37,7 +37,7 @@ end
 module top_module (
     input [4:0] a, b, c, d, e, f,
     output [7:0] w, x, y, z );
-    assign {w, x, y, z} = {a, b, c, d, e, f, 2'b11};
+    assign {w, x, y, z} = {a, b, c, d, e, f, 2'b11}; // 位拼接，需保持前后位宽一致。
 endmodule
 ```
 
@@ -167,10 +167,10 @@ always @(*) begin
 end
 ```
 
-[^always]: https://verilogoj.ustc.edu.cn/oj/problem/62
-
-[^latch]: https://verilogoj.ustc.edu.cn/oj/problem/95
-
 [^out]: https://stackoverflow.com/questions/5360508/using-wire-or-reg-with-input-or-output-in-verilog
 
 [^block]: https://verilogoj.ustc.edu.cn/oj/problem/68
+
+[^always]: https://verilogoj.ustc.edu.cn/oj/problem/62
+
+[^latch]: https://verilogoj.ustc.edu.cn/oj/problem/95
