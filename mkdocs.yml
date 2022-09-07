@@ -28,7 +28,7 @@ theme:
     - navigation.indexes # 为每个目录添加一个index
   font:
     text: JetBrains # 设置字体
-    code: JetBrains Mono # 设置字体
+    code: Fira Code # 设置字体
   icon:
     logo: material/notebook-outline # 页面icon
   favicon: images/zerokei-logo.png # 标签icon
