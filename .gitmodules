@@ -1,3 +1,6 @@
 [submodule "TextConverter"]
 	path = TextConverter
 	url = https://github.com/Zerokei/TextConverter.git
+[submodule "utils/TextConveter"]
+	path = utils/TextConveter
+	url = git@github.com:Zerokei/TextConverter.git

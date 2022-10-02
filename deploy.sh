@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # convert the obsidian format into mkdocs format
 python3 utils/TextConverter/main.py docs
 
