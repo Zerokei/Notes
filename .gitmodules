@@ -1,0 +1,3 @@
+[submodule "TextConvertor"]
+	path = utils/TextConvertor
+	url = https://github.com/Zerokei/TextConvertor.git
