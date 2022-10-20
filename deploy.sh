@@ -1,6 +1,6 @@
 #!/bin/bash
 # convert the obsidian format into mkdocs format
-python3 utils/TextConverter/main.py docs
+python3 utils/TextConverter/src/main.py docs
 
 # maintain git and deploy
 git add . 

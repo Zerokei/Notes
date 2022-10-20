@@ -28,6 +28,7 @@
 
 - [阮一峰的网络日志-科技爱好者周刊](https://ruanyifeng.com/blog/)
 - [咸鱼肆](https://www.yuque.com/xianyuxuan/saltfish_shop)
+- [Hacker News](https://news.ycombinator.com/)
 
 ## 小工具推荐
 
