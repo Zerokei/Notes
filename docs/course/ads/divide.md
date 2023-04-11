@@ -31,7 +31,7 @@ The recurrence $T(N)=aT(N/b) + \Theta(N^k\log^p{N})$ where $a\ge 1, b> 1, p\ge 0
 
 The recurrence $T(N)=aT(N/b)+f(N)$
 
-1. If $f(N)=O(N^{\log_b^{a}-\varepsilon})$ for some constant $\varepsilon>0$, then $T(N)=\Theta(N^{\log_b{a}})$
+1. If $f(N)=O(N^{\log_b{a}-\varepsilon})$ for some constant $\varepsilon>0$, then $T(N)=\Theta(N^{\log_b{a}})$
 2. If $f(N)=\Theta(N^{\log_b{a}})$, then $T(N)=\Theta(N^{\log_b{a}}\log{N})$
 3. If $f(N)=\Omega(N^{\log_{b}{a}+\varepsilon})$, for some constant $\varepsilon>0$, and if $af(N/b)<cf(N)$ for some constant $c<1$ and all sufficiently large $N$, then $T(N)=\Theta(f(N))$
 
