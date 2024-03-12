@@ -1,0 +1,2594 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="克瑞奇（Chritch）的笔记本">
+      
+      
+      
+      
+        <link rel="prev" href="../verilog/">
+      
+      
+        <link rel="next" href="../ann/">
+      
+      
+      <link rel="icon" href="../../images/zerokei-logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>The Art of the Readable Code - 克瑞奇（Chritch）的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"JetBrains";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-art-of-the-readable-code" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="克瑞奇（Chritch）的笔记本" class="md-header__button md-logo" aria-label="克瑞奇（Chritch）的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            克瑞奇（Chritch）的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Art of the Readable Code
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Zerokei/Notes/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../course/" class="md-tabs__link">
+          
+  
+    
+  
+  Course
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../rec/" class="md-tabs__link">
+          
+  
+    
+  
+  Recommendation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Misc
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="克瑞奇（Chritch）的笔记本" class="md-nav__button md-logo" aria-label="克瑞奇（Chritch）的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+
+    </a>
+    克瑞奇（Chritch）的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Zerokei/Notes/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../course/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Course
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../course/crypto/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cryptography
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cryptography
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/Math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/old/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    古典密码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/md5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MD5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/SHA1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SHA-1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/rc4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    分组密码工作模式与流密码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/DES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/AES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/RSA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RSA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/ECC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ECC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/crypto/final/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crypto 考试重点
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../course/db/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Database System
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Database System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../course/db/sql/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Relational Model & SQL
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Relational Model & SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/db/sql/algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relational Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/db/sql/sql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/db/ER/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E-R Model and Normal Form
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/db/storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../course/db/index/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Database Index
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Database Index
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/db/index/Bplus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B+ Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/db/index/lsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LSM Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/db/query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Query Processing & Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/db/transaction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transaction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../course/ads/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Advanced Data Structure and Algorithms
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Data Structure and Algorithms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/avl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVL Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/splay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Splay Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/rb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Red-Black Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/inverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inverted File Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/left/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leftist Heaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/skew/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skew Heaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/bin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binomial Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/back/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backtracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/divide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Divide and Conquer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/dp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Program
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/greedy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Greedy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/np/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NP Completeness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/appr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Randomized Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/para/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/ads/external/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External Sorting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorials/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs 安装记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/rsshub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RSSHub 使用记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu22.04 安装记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/idea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDEA 踩坑记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../rec/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Recommendation
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Recommendation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Misc
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verilog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verilog 语法手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    The Art of the Readable Code
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    The Art of the Readable Code
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 表面层次的改进
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 表面层次的改进">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 起名的艺术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 排版
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 注释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 简化循环逻辑
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 简化循环逻辑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 优化控制流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 拆分长表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 合理设置变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 重新组织代码
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ann/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Artificial Neural Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schoolbus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ZJU SchoolBus Writeup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 表面层次的改进
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 表面层次的改进">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 起名的艺术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 排版
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 注释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 简化循环逻辑
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 简化循环逻辑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 优化控制流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 拆分长表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 合理设置变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 重新组织代码
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="the-art-of-the-readable-code">The Art of the Readable Code</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>本篇笔记主要摘自《编写可读代码的艺术》（The Art of Readable Code）。有多年工程代码编程经验的作者，由浅入深地介绍了如何编写可读代码的技巧与原则，从代码风格到逻辑框架的构建，给出了不少实用的建议。</p>
+</div>
+<h2 id="1">1 表面层次的改进</h2>
+<h3 id="11">1.1 起名的艺术</h3>
+<p>💡建议一：避免空洞的词汇，比如：<code>get</code>, <code>size</code>...，可替换成 <code>height</code>, <code>fetch</code>, <code>load</code>...</p>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>更多选择</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>send</td>
+<td>deliver, dispatch, distribute</td>
+</tr>
+<tr>
+<td>find</td>
+<td>search, extract, locate</td>
+</tr>
+<tr>
+<td>start</td>
+<td>create, begin, open</td>
+</tr>
+<tr>
+<td>make</td>
+<td>create, build, add</td>
+</tr>
+</tbody>
+</table>
+<p>💡建议二：正确使用特殊词汇。</p>
+<p>比如索引和迭代器：<code>i</code>，<code>j</code>，<code>it</code>...；或者临时变量 <code>tmp</code>... 在循环中，为使得不会错位使用迭代器，可以在迭代器中加入相关信息，如 <code>number_i</code>，<code>club_i</code>。</p>
+<p>💡建议三：给名字附上额外的信息。</p>
+<ul>
+<li>已转化为 UTF-8 <strong>格式</strong>的 html 字节：<code>html_utf8</code></li>
+<li>程序开始时间，以毫秒为<strong>单位</strong>：<code>start_ms</code></li>
+</ul>
+<p>💡建议四：不宜过长。</p>
+<p>当然在变量中一味地存储信息也是不得当的，不然就可能会使它又臭又长，可以适当使用一些方法使其缩短。</p>
+<ol>
+<li>使用首字母缩略词：但仅仅应用于约定俗成的缩写，如 <code>evaluation</code> -&gt; <code>eval</code>，<code>documentation</code> -&gt; <code>doc</code>。书中提出了一个很直截了当的使用场景判断方法：让这些缩写对项目的<strong>新成员</strong>来说<strong>不陌生和费解</strong>。</li>
+<li>丢掉没用的词汇，如 <code>ConvertToString</code> -&gt; <code>ToString</code>。</li>
+</ol>
+<p>💡建议五：在小的作用域中使用较短的名字；相反，作用域大的词汇应尽可能长且详细。</p>
+<p>💡建议六：避免歧义。</p>
+<p>建议虽短，但其实很难做到完美。比如对于布尔值，<code>bool read_password = true</code>，就容易产生两种意思：1）要去读密码 2）已经读入密码，此时就可以通过 <code>need_password</code> 或 <code>user_is_authenticated</code> 替代。</p>
+<h3 id="12">1.2 排版</h3>
+<p>书中此块的内容是《审美》，但总体是和代码排版相关的，所以使用排版作为概括可能更为恰当。首先，书中提出了三条原则：</p>
+<ol>
+<li>使用一致的布局，让读者能快速适应</li>
+<li>当相似的代码尽可能相似</li>
+<li>把相关的代码分组，形成代码块</li>
+</ol>
+<p>具体而言，为了让代码变得整齐，我们有如下可以参考的方法。</p>
+<p>💡方法一：使用函数。</p>
+<p>就如书中三条原则中的第二条，我们应当让相似功能的代码在外观上也尽可能相似。</p>
+<div class="highlight"><pre><span></span><code><span class="n">assert</span><span class="p">(</span><span class="n">ExpendFullName</span><span class="p">(</span><span class="n">database_connection</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Doug Adams&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span>
+<span class="w">      </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Mr. Douglas Adams&quot;</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">ExpendFullName</span><span class="p">(</span><span class="n">database_connection</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jake Brown&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span>
+<span class="w">      </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Mr. Jocob Brown III&quot;</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">ExpendFullName</span><span class="p">(</span><span class="n">database_connection</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;No Such Guy&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;on match found&quot;</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">ExpendFullName</span><span class="p">(</span><span class="n">database_connection</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;more than one result&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>上面的代码就不适用于这条规则，它的单条语句过长以致需要换行，同时我们发现它的功能是重复的。此时可以使用函数对其进行包裹与整理，就可以达到下面的状态：</p>
+<div class="highlight"><pre><span></span><code><span class="n">CheckFullName</span><span class="p">(</span><span class="s">&quot;Doug Adams&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mr. Douglas Adams&quot;</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">CheckFullName</span><span class="p">(</span><span class="s">&quot;Jake Brown&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mr. Jocob Brown III&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">CheckFullName</span><span class="p">(</span><span class="s">&quot;No such Guy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no match found&quot;</span><span class="p">);</span>
+<span class="n">CheckFullName</span><span class="p">(</span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;more than one result&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>💡方法二：使用列对齐。</p>
+<blockquote>
+<p>列的边提供了“可见的栏杆”，阅读起来很方便，这是个“让相似的代码看起来相似的好例子”。</p>
+</blockquote>
+<p>对于方法一中用函数整理过的代码，其实看起来仍不是很直观，可能的原因就是无法一眼看出当前的字符串是第一个参数。此时就可以使用列对齐使其语义更加一目了然。</p>
+<div class="highlight"><pre><span></span><code><span class="n">CheckFullName</span><span class="p">(</span><span class="s">&quot;Doug Adams&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mr. Douglas Adams&quot;</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">CheckFullName</span><span class="p">(</span><span class="s">&quot;Jake Brown&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mr. Jocob Brown III&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">CheckFullName</span><span class="p">(</span><span class="s">&quot;No such Guy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">                   </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no match found&quot;</span><span class="p">);</span>
+<span class="n">CheckFullName</span><span class="p">(</span><span class="s">&quot;John&quot;</span><span class="w">       </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">                   </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;more than one result&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>💡方法三：固定顺序。</p>
+<p>很多时候，对于一个类中的很多变量，无论是在声明还是在使用时，最好能保持一定的顺序（比如重要性，或者字符大小等等），并在后面一直沿用此顺序。</p>
+<p>💡方法四：分段代码。</p>
+<p>对代码进行分段有诸多好处，首先它将相似功能的代码放在一起，能帮助理解代码的逻辑，快速通读代码（特别是配合注释阅读时）。同时也可以帮助读者定位自己现在所阅读的位置。以下是一个例子：</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">suggest_new_friends</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">email_password</span><span class="p">):</span>
+    <span class="c1"># Get the user&#39;s friends&#39; email addresses.</span>
+    <span class="n">friends</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">friends</span><span class="p">();</span>
+    <span class="n">friends_emails</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">email</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">friends</span><span class="p">)</span>
+
+    <span class="c1"># Import all email addresses from this user&#39;s email account.</span>
+    <span class="n">contacts</span> <span class="o">=</span> <span class="n">import_contacts</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">,</span> <span class="n">email_password</span><span class="p">)</span>
+    <span class="n">contact_emails</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">email</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">contacts</span><span class="p">)</span>
+
+    <span class="c1"># Find matching users that they aren&#39;t already friends with.</span>
+    <span class="n">non_friend_emails</span> <span class="o">=</span> <span class="n">contact_emails</span> <span class="o">-</span> <span class="n">friend_emails</span>
+    <span class="n">suggested_friends</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">email_in</span><span class="o">=</span><span class="n">non_friend_emails</span><span class="p">)</span>
+
+    <span class="c1"># Display these lists on the page.</span>
+    <span class="n">display</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user</span>
+    <span class="n">display</span><span class="p">[</span><span class="s1">&#39;friends&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">friends</span>
+    <span class="n">display</span><span class="p">[</span><span class="s1">&#39;suggested_friends&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">suggested_friends</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="s2">&quot;sugguested_friends.html&quot;</span><span class="p">,</span> <span class="n">display</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="13">1.3 注释</h3>
+<p>首先我们需要知道在哪些情况下是不需要注释的：</p>
+<ol>
+<li>为了写注释而写注释，即没有提供更多信息的注释</li>
+<li>为解释晦涩的命名的注释。好代码&gt;坏代码+好注释</li>
+</ol>
+<p>在很多时候，我们可能对如何写注释仍无从下手，作者给出了一些经典的应用场景。</p>
+<p>🏝 场景一：为代码中的瑕疵写注释。</p>
+<table>
+<thead>
+<tr>
+<th>标记</th>
+<th>通常的意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TODO:</td>
+<td>还没有处理的事情</td>
+</tr>
+<tr>
+<td>FIXME:</td>
+<td>已知的无法运行的代码</td>
+</tr>
+<tr>
+<td>HACK:</td>
+<td>对一个问题不得不采用的比较粗糙的方法</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="c1">// TODO: add connect function</span>
+</code></pre></div>
+<p>🏝 场景二：为常量加注释。</p>
+<p>一般来说，每个常量都有一个设置为该值的缘由。</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Impose a reasonable limit - no human can read that much anyway</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX_RSS_SUBSCRIPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+</code></pre></div>
+<p>🏝 场景三：可能引起歧义的地方。</p>
+<p>🏝 场景四：可能存在问题的地方。</p>
+<p>🏝 场景五：总结性的注释。</p>
+<p>对于一些代码块，在前面加上注释可以方法读者在阅读代码细节前有一个总体的印象。就如排版的第四个方法的例子中的应用那样，和代码分块配合使用，会有1+1&gt;2的效果。</p>
+<h2 id="2">2 简化循环逻辑</h2>
+<h3 id="21">2.1 优化控制流</h3>
+<p>✅ 建议一：调整判断条件的左右顺序</p>
+<p>对于以下两条指令，相信你会更喜欢前者而不是后者，这可能与我们的思维习惯有关系。在编写代码时，请尽量将常量放在右边，而会变化的，被用于检查、比较的值放在左边。</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 变量在左，常量在右</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span>
+<span class="c1">// 常量在左，变量在右</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>✅ 建议二：调整条件语句的前后顺序</p>
+<ul>
+<li>一般情况下，我们可能喜欢<strong>正</strong>逻辑大于<strong>负</strong>逻辑。
+    <div class="highlight"><pre><span></span><code><span class="c1">// 正逻辑</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do somehting</span>
+<span class="p">}</span><span class="w"> </span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span>
+<span class="c1">// 负逻辑</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>先处理<strong>简单</strong>的逻辑，再处理<strong>复杂</strong>的逻辑
+    当然，很多情况下，逻辑的复杂与否和前面的正负逻辑会发生冲突，这时就需要进行取舍和考量了。以下就是为先处理重要的逻辑而同时“违背”简单逻辑原则和正逻辑原则的经典例子：
+    <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># Log the error ...</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># ...</span>
+</code></pre></div></li>
+</ul>
+<p>✅ 建议三：谨慎使用可能影响可读性的表达式。</p>
+<ul>
+<li>三目运算符 <code>return exponent &gt;=0 ? mantissa * (1 &lt;&lt; exponent) : mantissa / (1 &lt;&lt; -exponent);</code></li>
+<li>do/while 循环</li>
+<li>goto</li>
+</ul>
+<p>✅ 建议四：最小化条件语句嵌套。</p>
+<p>很多情况下，在前人基础上进行功能添加时，就容易出现在语句中嵌套条件语句，例如下方时代码原有逻辑。</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">user_result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">reply</span><span class="p">.</span><span class="n">WriteErrors</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">reply</span><span class="p">.</span><span class="n">WriteErrors</span><span class="p">(</span><span class="n">user_result</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>后来增加逻辑后变为：</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">user_result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">permission_result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">reply</span><span class="p">.</span><span class="n">WriteErrors</span><span class="p">(</span><span class="s">&quot;error reading permissions&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">reply</span><span class="p">.</span><span class="n">WriteErrors</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">reply</span><span class="p">.</span><span class="n">WriteErrors</span><span class="p">(</span><span class="n">user_result</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>实际上，只要再略加思考，就能将上面不美观且难以理解的代码逻辑简化。</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">user_result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">reply</span><span class="p">.</span><span class="n">WriteErrors</span><span class="p">(</span><span class="n">user_result</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">permission_result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">reply</span><span class="p">.</span><span class="n">WriteErrors</span><span class="p">(</span><span class="s">&quot;error reading permissions&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">reply</span><span class="p">.</span><span class="n">WriteErrors</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="22">2.2 拆分长表达式</h3>
+<p>拆分长表达式的内容在 1.2 排版 中略有提及，表达式过长有两个缺点，一方面是不够美观，另一方面可读性也不够强。就如下方代码，判断条件的左边部分又是 <code>split</code> 又是 <code>strip</code> ，含义并不够清除明白。</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;root&quot;</span><span class="p">:</span>
+    <span class="c1"># do something</span>
+<span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;user1&quot;</span><span class="p">:</span>
+    <span class="c1"># do something</span>
+</code></pre></div>
+<p>若将被判断的值赋给一个变量，就可以使得判断条件更加直观可读。</p>
+<div class="highlight"><pre><span></span><code><span class="n">username</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="k">if</span>  <span class="n">username</span> <span class="o">==</span> <span class="s2">&quot;root&quot;</span><span class="p">:</span>
+    <span class="c1"># do something</span>
+<span class="k">elif</span> <span class="n">username</span> <span class="o">==</span> <span class="s2">&quot;user1&quot;</span><span class="p">:</span>
+    <span class="c1"># do something  </span>
+</code></pre></div>
+<p>当然除了使用<strong>变量</strong>外，也可以使用<strong>函数</strong>/<strong>宏定义</strong>在合适的场景中达到拆分长表达式的目的。</p>
+<h3 id="23">2.3 合理设置变量</h3>
+<p>在上一章中，我们可能会为了增加代码可读性拆分长表达式而增设变量，但是在代码可读性不受影响的情况下，我们当尽可能地减少变量，并尽可能地使用常量。对于一个变量，缩小起作用域也可以避免制造过多的 bug。
+比如下方代码，若 <code>now</code> 只在一个地方用到，则不如删去 <code>now</code> 以缩减不必要的变量，且这样的作法几乎不会影响可读性。</p>
+<div class="highlight"><pre><span></span><code><span class="n">now</span> <span class="o">=</span> <span class="n">datatime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">root_message</span><span class="o">.</span><span class="n">last_view_time</span> <span class="o">=</span> <span class="n">now</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">root_message</span><span class="o">.</span><span class="n">last_view_time</span> <span class="o">=</span> <span class="n">datatime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="3">3 重新组织代码</h2>
+<blockquote>
+<p>该部分会讨论可以在函数级别对代码做更大的改动，具体来讲，我们会讲到三种组织代码的方法：</p>
+<ol>
+<li>抽取出那些与程序主要目的“不相关的子问题”。</li>
+<li>重新组织代码使他一次只做一件事情。</li>
+<li>先用自然语言描述代码，然后用这个描述来帮助你找到更整洁的解决方案。</li>
+</ol>
+</blockquote>
+<p>✅ 建议一：分离代码。</p>
+<p>简而言之，即把“一般代码和项目专有的代码分开”。</p>
+<p>✅ 建议二：一次只做一件事。</p>
+<p>将所有要做的任务分出来，并这些任务变成单独的函数抑或代码中的一个段落。</p>
+<p>✅ 建议三：将想法变成代码。</p>
+<p>✅ 建议四：少些代码。</p>
+<p>在遇到问题时，第一反应不当是自己去写一个功能去解决需求。若能诉诸现有的库或者系统工具解决，使用这些成熟的工具可能要比从头开始设计可靠的多。</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2022 Zerokei
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:chritch-7@outlook.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Zerokei" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
